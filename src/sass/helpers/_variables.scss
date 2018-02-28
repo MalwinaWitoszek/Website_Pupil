@@ -1,11 +1,26 @@
-// ---------------------
-//     BASE
-// ---------------------
+//Typography
+$general-font-size: 16px;
+$general-font-family: "Lato", sans-serif;
+$general-font-weight: 400;
+$general-font-weight-bold: 700;
+$general-text-align: justify;
 
-    // *--------- LAYOUT ---------*
+$headers-text-align: center;
 
-    // *--------- COLORS ---------*
-    $base__background-color: #fff;
-    $base__border-color: #ececec;
-    $special__text-color: #29D58E;
-    $special__background-color: #29D58E;
+//Colors
+$general-background-color: rgb(230, 221, 221);
+$general-text-color: rgb(5, 65, 18);
+$headers-background-color: #a17f7f;
+
+
+// // ---------------------
+// //     BASE
+// // ---------------------
+
+//     // *--------- LAYOUT ---------*
+
+//     // *--------- COLORS ---------*
+//     $base__background-color: #fff;
+//     $base__border-color: #ececec;
+//     $special__text-color: #29D58E;
+//     $special__background-color: #29D58E;

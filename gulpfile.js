@@ -26,7 +26,7 @@ gulp.task('styles', function() {
     return gulp.src("src/sass/main.scss")
     .pipe(plumber())  //  zapobiega przerywaniu zadań - obsługa błędów
     .pipe(sass.sync({  //   kompilacja SCSS → CSS
-        outputStyle: "compressed"          // możliwości: nested, expanded, compact, compressed 
+        outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed 
     }))     
     .pipe(autoprefixer({browsers: ["last 2 version"]}))	  // dodanie wendor prefiksów  
     .pipe(gulp.dest('src/css'))

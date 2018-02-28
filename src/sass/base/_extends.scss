@@ -1,15 +1,36 @@
-// ---------------------
-//     EXTENDS
-// ---------------------
+
+// CLEARFIX
 
 %clearfix {
-    @include clearfix;
-}
+    *zoom: 1;
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  
+// example:
+// .container-with-floated-children {
+//     @extend %clearfix;
+//   }
 
-%transitionColor {
-    @include transition($props: color);
-}
 
-%transitionAll {
-    @include transition;
-}
+
+// // ---------------------
+// //     EXTENDS
+// // ---------------------
+
+// %clearfix {
+//     @include clearfix;
+// }
+
+// %transitionColor {
+//     @include transition($props: color);
+// }
+
+// %transitionAll {
+//     @include transition;
+// }

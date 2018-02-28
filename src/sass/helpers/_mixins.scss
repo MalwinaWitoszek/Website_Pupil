@@ -1,81 +1,141 @@
-// -------------------------------
-//     MIXINS
-// -------------------------------
 
-// comment
-@mixin comment($text) {
-/*------------------------
-    #{to-upper-case($text)}
-------------------------*/
-}
+// MEDIA RULES - BREAKPOINTS
 
-// *--------- BOX SIZING ---------*
-@mixin box-sizing($type) {
-    -webkit-box-sizing: $type;
-    -moz-box-sizing: $type;
-    box-sizing: $type;
-}
-
-// *--------- CLEARFIX ---------*
-@mixin clearfix {
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
+@mixin breakpoints($point) {
+    @if $point == XXL {
+    @media (min-width: 1600px) { @content; }
     }
-
-    &:after {
-        clear :both;
+    @else if $point == XL {
+    @media (max-width: 1200px) { @content; }
     }
+    @else if $point == L {
+    @media (max-width: 1000px) { @content; }
+    }
+    @else if $point == M {
+    @media (max-width: 850px) { @content; }
+    }
+    @else if $point == S {
+    @media (max-width: 710px) { @content; }
+    }
+    @else if $point == XS {
+    @media (max-width: 650px) { @content; }
+    }
+    @else if $point == XXS {
+    @media (max-width: 400px) { @content; }
+    }
+    }
+    
+    //example:
+    // .header {
+    // height: 100px;
+    // @include breakpoints(S) { height: 80px; }
+    // }
 
-    & {
-        *zoom: 1;
+
+// OPACITY ELEMENT WITHOUT INSIDE ELEMENTS
+
+@mixin opacity($opacity,$bg-color,$space-in-px){
+    display: inline-block;
+    position: relative; 
+    &::before
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -($space-in-px);
+      left: -($space-in-px);
+      padding: $space-in-px;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: #a17f7f;
+      opacity: $opacity;
     }
 }
+// example:
+// .border       class of the text to border with opacity
+// {
+//     @include opacity(.3,$headers-background-color,70px)  
+// }
 
-// *--------- TRANSITIONS ---------*
-@mixin transition($props: all, $speed: 0.2s, $easing: linear) {
-    transition: $props $speed $easing;
-}
+// // -------------------------------
+// //     MIXINS
+// // -------------------------------
 
-// *--------- PLECEHOLDER ---------*
-@mixin placeholder {
-    &::placeholder {@content};
-}
+// // comment
+// @mixin comment($text) {
+// /*------------------------
+//     #{to-upper-case($text)}
+// ------------------------*/
+// }
 
-// *--------- NO TEXT ---------*
-@mixin no-text {
-    font-size: 0;
-    line-height: 0;
-    text-shadow: none;
-    color: transparent;
-}
+// // *--------- BOX SIZING ---------*
+// @mixin box-sizing($type) {
+//     -webkit-box-sizing: $type;
+//     -moz-box-sizing: $type;
+//     box-sizing: $type;
+// }
 
-// *--------- BOTH CENTER ---------*
-@mixin both-center($top: -50%, $left: -50%, $position: relative) {
-    position: $position;
-    top: 50%;
-    left: 50%;
+// // *--------- CLEARFIX ---------*
+// @mixin clearfix {
+//     &:before,
+//     &:after {
+//         content: " ";
+//         display: table;
+//     }
 
-    @include transform(translate($top, $left));
-}
+//     &:after {
+//         clear :both;
+//     }
 
-// *--------- TRANSFORM ---------*
-@mixin transform($transforms) {
-    transform: $transforms;
-    will-change: transform;
-}
+//     & {
+//         *zoom: 1;
+//     }
+// }
 
-// *--------- SCALE ---------*
-@mixin scale($scale) {
-    @include transform(scale($scale));
-}
+// // *--------- TRANSITIONS ---------*
+// @mixin transition($props: all, $speed: 0.2s, $easing: linear) {
+//     transition: $props $speed $easing;
+// }
 
-// *--------- KEYFRAMES ---------*
-@mixin keyframes($name) {
+// // *--------- PLECEHOLDER ---------*
+// @mixin placeholder {
+//     &::placeholder {@content};
+// }
 
-    @keyframes #{$name} {
-        @content;
-    }
+// // *--------- NO TEXT ---------*
+// @mixin no-text {
+//     font-size: 0;
+//     line-height: 0;
+//     text-shadow: none;
+//     color: transparent;
+// }
 
-}
+// // *--------- BOTH CENTER ---------*
+// @mixin both-center($top: -50%, $left: -50%, $position: relative) {
+//     position: $position;
+//     top: 50%;
+//     left: 50%;
+
+//     @include transform(translate($top, $left));
+// }
+
+// // *--------- TRANSFORM ---------*
+// @mixin transform($transforms) {
+//     transform: $transforms;
+//     will-change: transform;
+// }
+
+// // *--------- SCALE ---------*
+// @mixin scale($scale) {
+//     @include transform(scale($scale));
+// }
+
+// // *--------- KEYFRAMES ---------*
+// @mixin keyframes($name) {
+
+//     @keyframes #{$name} {
+//         @content;
+//     }
+
+// }

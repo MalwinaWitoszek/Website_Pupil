@@ -1,24 +1,49 @@
-
-
-html
-{
-    height: 100%
+@for $i from 1 through 4 {
+    .parallax-img#{$i}
+    {
+        min-height: 400px;
+        position: relative;
+        opacity: 0.7;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;   //add parallax effect
+    }
 }
 
-body
+.parallax-img1
 {
-    height: 100%;
+    background-image:url('../img/dog-parallax1.jpg');
+}
+.parallax-img2
+{
+    background-image:url('../img/dog-parallax2.jpg');
+}
+.parallax-img3
+{
+    background-image: url('../img/cat-parallax3.jpg');
+}
+.parallax-img4
+{
+    background-image: url('../img/dog-parallax4.jpg');
+}
+
+.parallax-text
+{
+    position: absolute;
+    top:50%;
     width: 100%;
-    background-color: $general-background-color;
-    font-family: $general-font-family;
-    font-size: $general-font-size;
-    font-weight: $general-font-weight;
-    margin: 0;
-    line-height: 1.8em;
-    text-align: $general-text-align;
-    color: $general-text-color;
+    color: black;
+    text-align: $headers-text-align;
+    font-size: $general-font-size*2;
+    font-weight: $general-font-weight-bold;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    .border
+    {
+        @include opacity(.5,$headers-background-color,20px)  
+    }
 }
-
 
 
 
