@@ -18,6 +18,13 @@ body
     text-align: $general-text-align;
     color: $general-text-color;
 }
+.container
+{
+    width: $general-container-width;
+    margin: 0 auto;
+    overflow: hidden;
+    @extend %clearfix;
+}
 
 
 

@@ -58,6 +58,26 @@
 //     @include opacity(.3,$headers-background-color,70px)  
 // }
 
+// COMMENT
+
+@mixin comment($text) {
+/*------------------------
+    #{to-upper-case($text)}
+------------------------*/
+}
+
+// BOX SIZING
+
+@mixin box-sizing($type) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+}
+
+
+
+
+
 // // -------------------------------
 // //     MIXINS
 // // -------------------------------

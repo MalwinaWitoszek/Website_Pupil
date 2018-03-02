@@ -1,3 +1,22 @@
+#slides{
+    position: relative;
+    height: 100vh;
+    
+}
+.slide{
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 3s;
+    transition: opacity 3s;
+    height: 100%;
+}
+.showing{
+    z-index: 100;
+    opacity: 1;
+}
+
+
 // // -------------------------------
 // //     SLIDER VARIABLES
 // // -------------------------------

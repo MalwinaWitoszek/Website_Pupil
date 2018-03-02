@@ -18,8 +18,10 @@
 @import "components/social";
 // *--------- LIGHTBOX ---------*
 @import "components/lightbox";
-// *--------- BX SLIDER ---------*
-@import "components/bxslider";
+// *--------- SLIDER ---------*
+@import "components/slideshow";
+// *--------- GALLERY ---------*
+@import "components/gallery";
 // ---------------------
 //     LAYOUT
 // ---------------------
@@ -31,7 +33,7 @@
 @import "layout/content";
 // *--------- FOOTER ---------*
 @import "layout/footer";
-// *--------- FOOTER ---------*
+// *---------  PARALLAX ---------*
 @import "layout/parallax";
 // ---------------------
 //     MODULES

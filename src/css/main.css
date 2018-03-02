@@ -1,1 +1,358 @@
-html{height:100%}body{height:100%;width:100%;background-color:#e6dddd;font-family:"Lato",sans-serif;font-size:16px;font-weight:400;margin:0;line-height:1.8em;text-align:justify;color:#054112}.section{padding:50px 80px}.parallax-img1{min-height:400px;position:relative;opacity:0.7;background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed}.parallax-img2{min-height:400px;position:relative;opacity:0.7;background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed}.parallax-img3{min-height:400px;position:relative;opacity:0.7;background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed}.parallax-img4{min-height:400px;position:relative;opacity:0.7;background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed}.parallax-img1{background-image:url("../img/dog-parallax1.jpg")}.parallax-img2{background-image:url("../img/dog-parallax2.jpg")}.parallax-img3{background-image:url("../img/cat-parallax3.jpg")}.parallax-img4{background-image:url("../img/dog-parallax4.jpg")}.parallax-text{position:absolute;top:50%;width:100%;color:black;text-align:center;font-size:32px;font-weight:700;letter-spacing:8px;text-transform:uppercase}.parallax-text .border{display:inline-block;position:relative}.parallax-text .border::before{content:"";display:block;position:absolute;top:-20px;left:-20px;padding:20px;z-index:-1;width:100%;height:100%;background-color:#a17f7f;opacity:.5}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
+}
+
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+#slides {
+  position: relative;
+  height: 100vh;
+}
+
+.slide {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
+  height: 100%;
+}
+
+.showing {
+  z-index: 100;
+  opacity: 1;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  border: white solid 10px;
+  max-height: calc(100vh - 10px);
+  background-color: white;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-container .main-img {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.gallery-container:nth-child(2) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.gallery-container:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.gallery-container:nth-child(4) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.gallery-container:nth-child(5) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.gallery-container:nth-child(6) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.gallery-container:nth-child(7) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.gallery-container:nth-child(8) {
+  grid-column: 5;
+  grid-row: 2;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn 1s ease-in 1 forwards;
+          animation: fadeIn 1s ease-in 1 forwards;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #e6dddd;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.8em;
+  text-align: justify;
+  color: #054112;
+}
+
+.container, .gallery-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header {
+  background-color: white;
+  min-height: 75px;
+}
+
+header .logo {
+  float: left;
+  height: 60px;
+  width: auto;
+  padding-top: 25px 0;
+}
+
+#top-nav {
+  float: right;
+}
+
+#top-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#top-nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 22px;
+  position: relative;
+  font-family: "Dosis", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 75px;
+  text-transform: uppercase;
+}
+
+#top-nav a {
+  text-transform: uppercase;
+  color: #F70000;
+}
+
+#top-nav a:hover {
+  color: #ffcece;
+}
+
+#top-nav a:hover::before {
+  width: 100%;
+}
+
+#top-nav a::before {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 0%;
+  background-color: #F70000;
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms;
+}
+
+.parallax-img1 {
+  min-height: 400px;
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.parallax-img2 {
+  min-height: 400px;
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.parallax-img3 {
+  min-height: 400px;
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.parallax-img4 {
+  min-height: 400px;
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.parallax-img1 {
+  background-image: url("../img/dog-parallax1.jpg");
+}
+
+.parallax-img2 {
+  background-image: url("../img/dog-parallax2.jpg");
+}
+
+.parallax-img3 {
+  background-image: url("../img/cat-parallax3.jpg");
+}
+
+.parallax-img4 {
+  background-image: url("../img/dog-parallax4.jpg");
+}
+
+.parallax-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.parallax-text .border {
+  display: inline-block;
+  position: relative;
+}
+
+.parallax-text .border::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  padding: 20px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #a17f7f;
+  opacity: 0.5;
+}
+
+.container, .gallery-container {
+  *zoom: 1;
+}
+
+.container:before, .gallery-container:before, .container:after, .gallery-container:after {
+  content: " ";
+  display: table;
+}
+
+.container:after, .gallery-container:after {
+  clear: both;
+}
+
+/*----------------------------*/
+/*        COPYRIGHT 2016      */
+/*        www.eduweb.pl       */
+/*----------------------------*/
