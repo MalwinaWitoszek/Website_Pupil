@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="container">
-            <img src="img/logo.png" class="logo" alt="logo Pupil salon pielęgnacji">
+            <img src="img/logo.png" id="logo" alt="logo Pupil salon pielęgnacji">
             <nav id="top-nav">
                 <ul>
                     <li><a href="#">o nas</a></li>
@@ -24,19 +24,65 @@
     </header>
 
     <main>
-        <section id="slideshow" class="section">
-            <div class="container">
-                <!-- <ul id="slides">
-                    <li class = "slide showing"><img src="http://bit.ly/2BT6egD"></li>
-                    <li class = "slide "><img src="http://bit.ly/2CbQpgE"></li>
-                    <li class = "slide "><img src="http://bit.ly/2Ey84Ex"></li>
-                    <li class = "slide "><img src="http://bit.ly/2nSeggW"></li>
-                    <li class = "slide "><img src="http://bit.ly/2Ewcv2C"></li>
-                </ul> -->
+         <!-- main banner as a slideshow -->
+        <section id="presentation-slideshow" class="section">
+            <div>
+                <ul id="slides">
+                        <li class = "slide showing">
+                            <div>
+                                <img src="img/slideshow1.jpg">
+                                <div id="slide-description">
+                                    <img id="paw-img" src="img/lapa.png" alt="" width="30px">
+                                    <h1><span style="text-orientation:upright">Pupil</span><span>salon pielęgnacji</span></h1>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "slide">
+                            <div>               
+                                <img src="img/slideshow2.jpg">
+                                <div id="slide-description">
+                                        <h2>Strzyżenie</h2>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "slide">
+                            <div>               
+                                <img src="img/slideshow3.jpg">
+                                <div id="slide-description">
+                                        <h2>Trymowanie</h2>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "slide">
+                            <div>               
+                                <img src="img/slideshow4.jpg">
+                                <div id="slide-description">
+                                        <h2>Kąpiel</h2>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "slide">
+                            <div>               
+                                <img src="img/slideshow5.jpg">
+                                <div id="slide-description">
+                                        <h2>Wyczesywanie</h2>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "slide">
+                            <div>               
+                                <img src="img/slideshow6.jpg">
+                                <div id="slide-description">
+                                        <h2>Pielęgnacja</h2>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
             </div>
         </section>
 
-        <section class="section">
+        <!-- section about firm and owner -->
+        <section id="presentation-area" class="section">
             <div class="container">
                 <h2>czym jest pupil , dla kogo pupil</h2>
                 <p>
@@ -46,14 +92,11 @@
         </section>
 
         <div class="parallax-img1">
-            <div class="parallax-text">
-                <span class="border">
-                    Zapraszam pieski na strzyżenie
-                </span>
-            </div>
+
         </div>
 
-        <section class="section">
+         <!-- section about services offered -->
+        <section id="offer-area" class="section">
             <div class="container"></div>
                 <h2>Pierwsza sekcja </h2>
                 <p>
@@ -63,14 +106,11 @@
         </section>
 
         <div class="parallax-img2">
-            <div class="parallax-text">
-                <span class="border">
-                    Zapraszam pieski na trymowanie
-                </span>
-            </div>
+
         </div>
 
-        <section class="section">
+         <!-- list of prices -->
+        <section id="price-list-area" class="section">
             <div class="container">
                 <h2>druga sekcja </h2>
                 <p>
@@ -80,14 +120,11 @@
         </section>
 
         <div class="parallax-img3">
-            <div class="parallax-text">
-                <span class="border">
-                    Zapraszam kotki na strzyżenie
-                </span>
-            </div>
+
         </div>
         
-        <section id="gallery" class="section">
+        <!--photo gallery section -->
+        <section id="gallery-area" class="section">
             <div class="gallery-container">
                 <!-- <div class="images"> -->
                     <div class="main-img">
@@ -107,13 +144,14 @@
 
         <div class="parallax-img4">
             <div class="parallax-text">
-                <span class="border">
-                    Zapraszam do salonu pielęgnacji
-                </span>
+                <h2 class="border">
+                    Psi fryzjer "PUPIL" zaprasza!
+                </h2>
             </div>
         </div>
         
-        <section class="section">
+          <!--contact details section -->
+        <section id="contact-area" class="section">
             <div class="container">
                 <h2>czwarta sekcja </h2>
                 <p>
@@ -122,6 +160,8 @@
             </div>
         </section>  
     </main>
+    <footer></footer>
+<script src="js/scrolleffect.js"></script>   
 <!-- <script src="js/slideshow.js"></script> -->
 <script src="js/gallery.js"></script>
 

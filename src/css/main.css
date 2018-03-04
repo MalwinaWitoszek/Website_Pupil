@@ -78,6 +78,34 @@ input[type="checkbox"] {
   -webkit-appearance: checkbox;
 }
 
+h1 {
+  font-size: 25.6px;
+  position: relative;
+}
+
+h1 span:first-child {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 48px;
+  letter-spacing: 24px;
+}
+
+h1 span:last-child {
+  position: absolute;
+  bottom: 32px;
+  left: 67.2px;
+  letter-spacing: 4px;
+}
+
+#paw-img {
+  height: 48px;
+  width: auto;
+  position: absolute;
+  top: -25%;
+}
+
 #slides {
   position: relative;
   height: 100vh;
@@ -85,15 +113,34 @@ input[type="checkbox"] {
 
 .slide {
   position: absolute;
+  top: 0;
   opacity: 0;
   z-index: 1;
   -webkit-transition: opacity 3s;
   transition: opacity 3s;
   height: 100%;
+  width: 100%;
+}
+
+.slide:first-child {
+  position: relative;
+}
+
+.slide img:not(#paw-img) {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.slide #slide-description {
+  position: absolute;
+  bottom: 20%;
+  left: 8%;
 }
 
 .showing {
-  z-index: 100;
+  z-index: 10;
   opacity: 1;
 }
 
@@ -193,16 +240,36 @@ body {
   overflow: hidden;
 }
 
+main {
+  margin-top: 100px;
+}
+
+h2 {
+  background-color: goldenrod;
+  color: red;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 10px;
+}
+
 header {
   background-color: white;
   min-height: 75px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 100;
 }
 
-header .logo {
+#logo {
   float: left;
   height: 60px;
   width: auto;
-  padding-top: 25px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #top-nav {
@@ -217,14 +284,15 @@ header .logo {
 
 #top-nav li {
   display: inline-block;
-  margin-left: 70px;
-  padding-top: 22px;
+  margin-left: 45px;
   position: relative;
   font-family: "Dosis", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 75px;
+  line-height: 100px;
   text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #top-nav a {
@@ -233,7 +301,7 @@ header .logo {
 }
 
 #top-nav a:hover {
-  color: #ffcece;
+  color: #ffabab;
 }
 
 #top-nav a:hover::before {
@@ -250,6 +318,18 @@ header .logo {
   bottom: 0;
   -webkit-transition: all ease-in-out 350ms;
   transition: all ease-in-out 350ms;
+}
+
+.scroll-header {
+  height: 60px;
+}
+
+.scroll-header-logo {
+  height: 20px;
+}
+
+.scroll-header-li {
+  font-size: 12px;
 }
 
 .parallax-img1 {

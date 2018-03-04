@@ -25,7 +25,18 @@ body
     overflow: hidden;
     @extend %clearfix;
 }
-
+main
+{
+    margin-top: $header-base-height;
+}
+h2
+{
+    background-color: goldenrod;
+    color: red;
+    font-size: 2*$general-font-size;
+    font-weight: 700;
+    padding: 10px;
+}
 
 
 

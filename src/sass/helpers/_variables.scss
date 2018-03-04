@@ -1,5 +1,8 @@
 //Typography
 $general-font-size: 16px;
+$heading-h1-font-size: 3*$general-font-size;
+$heading-h2-font-size: 2*$general-font-size;
+$heading-h3-font-size: 1.5*$general-font-size;
 $general-font-family: "Lato", sans-serif;
 $general-font-weight: 400;
 $general-font-weight-bold: 700;
@@ -7,6 +10,7 @@ $general-text-align: justify;
 $headers-text-align: center;
 $nav-font-family: "Dosis", Arial, sans-serif; // 400, 700
 $nav-font-size: 16px;
+$nav-change-font-size: 12px;
 
 //Colors
 $general-background-color: rgb(230, 221, 221);
@@ -16,12 +20,15 @@ $gallery-background-color: white;
 $headers-background-color: #a17f7f; 
 
 $nav-text-color: #F70000;
-$nav-text-color-active: lighten($nav-text-color, 42);
+$nav-text-color-active: lighten($nav-text-color, 35);
 
 
 //dimensions
 $general-container-width: 80%;
-$header-logo-height: 60px;
+$header-base-height: 100px;
+$header-change-height: 60px;
+$header-logo-base-height: 60px;
+$header-logo-change-height: 20px;
 $gallery-grid-gap : 10px;
 $gallery-max-width: 760px;
 

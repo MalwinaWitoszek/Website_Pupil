@@ -1,5 +1,5 @@
 var current = document.querySelector('#actual'),
-    images = document.querySelectorAll('.container > img'),
+    images = document.querySelectorAll('.gallery-container > img'),
     max = images.length,
     opacity = 0.6;
 

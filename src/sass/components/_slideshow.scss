@@ -1,3 +1,32 @@
+h1
+{
+    font-size: .8*$heading-h2-font-size;
+    position: relative;
+    
+    & span:first-child
+    {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: $heading-h1-font-size;
+    letter-spacing: 1.5*$general-font-size;
+    }
+    & span:last-child
+    {
+    position: absolute;
+    bottom: (2*$general-font-size);
+    left: 1.4*$heading-h1-font-size;
+    letter-spacing: ($general-font-size / 4);
+    // width: 100vw;
+    }
+}
+#paw-img
+{
+    height: $heading-h1-font-size;
+    width: auto;
+    position: absolute;
+    top: -25%;
+}
+
 #slides{
     position: relative;
     height: 100vh;
@@ -5,14 +34,35 @@
 }
 .slide{
     position: absolute;
+    top: 0;
     opacity: 0;
     z-index: 1;
     -webkit-transition: opacity 3s;
     transition: opacity 3s;
     height: 100%;
+    width: 100%;
+    
+    &:first-child
+    {
+        position: relative;
+    }
+
+    img:not(#paw-img)
+    {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+    #slide-description
+    {
+        position: absolute;
+        bottom: 20%;
+        left: 8%;
+    }
 }
 .showing{
-    z-index: 100;
+    z-index: 10;
     opacity: 1;
 }
 
