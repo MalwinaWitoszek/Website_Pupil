@@ -78,12 +78,94 @@ input[type="checkbox"] {
   -webkit-appearance: checkbox;
 }
 
+.offer-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-gap: 10px;
+  background-color: white;
+}
+
+.offer-box {
+  border: red solid 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.offer-box:first-child {
+  grid-column: 2 / span 5;
+  grid-row: 1 / span 3;
+  background-color: pink;
+}
+
+.offer-box:nth-child(2) {
+  grid-column: 7 / span 5;
+  grid-row: 2 / span 3;
+  background-color: #87bd22;
+}
+
+.offer-box:nth-child(3) {
+  grid-column: 8 / span 5;
+  grid-row: 5 / span 3;
+  background-color: #1a1397;
+}
+
+.offer-box:nth-child(4) {
+  grid-column: 7 / span 5;
+  grid-row: 8 / span 3;
+  background-color: #1aaa21;
+}
+
+.offer-box:nth-child(5) {
+  grid-column: 2 / span 5;
+  grid-row: 7 / span 3;
+  background-color: #e2a025;
+}
+
+.offer-box:nth-child(6) {
+  grid-column: 1 / span 5;
+  grid-row: 4 / span 3;
+  background-color: #1e979b;
+}
+
+.offer-box:last-child {
+  grid-column: 6 / span 2;
+  grid-row: 5 / span 2;
+  background-color: brown;
+}
+
+.offer-box img {
+  height: 170px;
+  width: 200px;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn 1s ease-in 1 forwards;
+          animation: fadeIn 1s ease-in 1 forwards;
+}
+
 h1 {
   font-size: 25.6px;
   position: relative;
 }
 
 h1 span:first-child {
+  position: absolute;
+  bottom: 3.2px;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
@@ -103,12 +185,15 @@ h1 span:last-child {
   height: 48px;
   width: auto;
   position: absolute;
-  top: -25%;
+}
+
+#presentation-slideshow > div {
+  height: 100vh;
 }
 
 #slides {
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .slide {
@@ -122,12 +207,13 @@ h1 span:last-child {
   width: 100%;
 }
 
-.slide:first-child {
+.slide > div {
   position: relative;
+  height: 100%;
 }
 
 .slide img:not(#paw-img) {
-  height: auto;
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -199,12 +285,6 @@ h1 span:last-child {
   grid-row: 2;
 }
 
-@-webkit-keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -234,14 +314,10 @@ body {
   color: #054112;
 }
 
-.container, .gallery-container {
-  width: 80%;
+.container, .offer-container, .gallery-container {
+  width: 90%;
   margin: 0 auto;
   overflow: hidden;
-}
-
-main {
-  margin-top: 100px;
 }
 
 h2 {
@@ -258,7 +334,6 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  height: 100px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 100;
@@ -289,7 +364,7 @@ header {
   font-family: "Dosis", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 100px;
+  line-height: 85px;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -419,16 +494,16 @@ header {
   opacity: 0.5;
 }
 
-.container, .gallery-container {
+.container, .offer-container, .gallery-container {
   *zoom: 1;
 }
 
-.container:before, .gallery-container:before, .container:after, .gallery-container:after {
+.container:before, .offer-container:before, .gallery-container:before, .container:after, .offer-container:after, .gallery-container:after {
   content: " ";
   display: table;
 }
 
-.container:after, .gallery-container:after {
+.container:after, .offer-container:after, .gallery-container:after {
   clear: both;
 }
 

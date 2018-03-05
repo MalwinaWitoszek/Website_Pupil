@@ -17,6 +17,7 @@ $general-background-color: rgb(230, 221, 221);
 $general-text-color: rgb(5, 65, 18);
 $header-background-color: white;
 $gallery-background-color: white;
+$offer-background-color: white;
 $headers-background-color: #a17f7f; 
 
 $nav-text-color: #F70000;
@@ -24,12 +25,13 @@ $nav-text-color-active: lighten($nav-text-color, 35);
 
 
 //dimensions
-$general-container-width: 80%;
-$header-base-height: 100px;
+$general-container-width: 90%;
+$header-base-height: 85px;
 $header-change-height: 60px;
 $header-logo-base-height: 60px;
 $header-logo-change-height: 20px;
 $gallery-grid-gap : 10px;
+$offer-grid-gap : 10px;
 $gallery-max-width: 760px;
 
 

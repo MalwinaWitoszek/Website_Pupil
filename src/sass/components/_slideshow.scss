@@ -5,10 +5,13 @@ h1
     
     & span:first-child
     {
+    position: absolute;
+    bottom: (.2*$general-font-size);
     writing-mode: vertical-lr;
     text-orientation: upright;
     font-size: $heading-h1-font-size;
     letter-spacing: 1.5*$general-font-size;
+    
     }
     & span:last-child
     {
@@ -24,15 +27,20 @@ h1
     height: $heading-h1-font-size;
     width: auto;
     position: absolute;
-    top: -25%;
-}
 
-#slides{
-    position: relative;
+}
+#presentation-slideshow > div
+{
     height: 100vh;
+}
+#slides
+{
+    position: relative;
+    height: 100%;
     
 }
-.slide{
+.slide
+{
     position: absolute;
     top: 0;
     opacity: 0;
@@ -42,14 +50,15 @@ h1
     height: 100%;
     width: 100%;
     
-    &:first-child
+    & > div
     {
         position: relative;
+        height: 100%;
     }
 
     img:not(#paw-img)
     {
-        height: auto;
+        height: 100%;
         width: 100%;
         position: absolute;
         top: 0;

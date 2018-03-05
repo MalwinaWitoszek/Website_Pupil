@@ -3,7 +3,7 @@ console.log(x);
 var currentSlide = 0;
 //chcemy wiedziec ile mamy naszych sliderow
 var slides = document.querySelectorAll('#slides .slide')
-var sliderInterval = setInterval(nextSlide,5000);
+var sliderInterval = setInterval(nextSlide,4000);
 
 function nextSlide(){
   slides[currentSlide].className = "slide";

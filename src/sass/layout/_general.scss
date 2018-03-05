@@ -18,6 +18,10 @@ body
     text-align: $general-text-align;
     color: $general-text-color;
 }
+.section
+{
+    // min-height: calc(100vh - $header-base-height);
+}
 .container
 {
     width: $general-container-width;
@@ -25,10 +29,7 @@ body
     overflow: hidden;
     @extend %clearfix;
 }
-main
-{
-    margin-top: $header-base-height;
-}
+
 h2
 {
     background-color: goldenrod;
@@ -36,8 +37,8 @@ h2
     font-size: 2*$general-font-size;
     font-weight: 700;
     padding: 10px;
-}
 
+}
 
 
 // // -------------------------------
