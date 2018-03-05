@@ -3,23 +3,31 @@
     @extend .container;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 70px);
     // max-width: $galery-max-width;
     grid-gap: $offer-grid-gap;
     background-color: $offer-background-color;
+    h3
+    {
+        font-size: $heading-h3-font-size;
+        
+    }
+
+
 }  
  
 .offer-box
 {
     border: red solid 2px;
     display: flex;
-    
+    min-height: $offer-box-min-height;
 
     &:first-child
     {
         grid-column: 2 / span 5;
         grid-row: 1 / span 3;
         background-color: pink;
+
     }
 
     &:nth-child(2)
@@ -51,28 +59,46 @@
         grid-column: 1 / span 5;
         grid-row: 4 / span 3;
         background-color: rgb(30, 151, 155);  
+        
     }
-    &:last-child
+    &:nth-child(7)
     {
         grid-column: 6 / span 2;
         grid-row: 5 / span 2;   
-        background-color: brown;
-    }
-    img
-    {
-        height: 170px;
-        width: 200px;
-    }
-}
+        border: none;
 
-//actual image fade in animation
-@keyframes fadeIn{
-    to{
-        opacity: 1;
     }
-}
-.fade-in
-{
-    opacity: 0;
-    animation: fadeIn 1s ease-in 1 forwards;
+    &:nth-child(8)
+    {
+        grid-column: 1;
+        grid-row: 1 / span 3;   
+        border: none;
+        
+    }
+    &:nth-child(9)
+    {
+        grid-column: 12;
+        grid-row: 8 / span 3;   
+        border: none;
+    }
+    
+    .offer-picture
+    {
+        height: 100%;
+        width: 67%;
+        
+    }
+    .offer-addition-img1
+    {
+        height: 60%;
+        width: 50%;
+        @include both-center;
+    }
+    .offer-addition-img2
+    {
+        height: 80%;
+        width: 90%;
+        margin: auto;
+        opacity: .2;
+    }
 }

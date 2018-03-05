@@ -1,0 +1,107 @@
+.prices-container
+{
+    @extend .container;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 2*$heading-h1-font-size 1fr 1fr;
+    // max-width: $galery-max-width;
+    background-color: $offer-background-color;
+
+    h3
+    {
+        font-size: $heading-h3-font-size;
+        position: relative;
+        top: 30%;
+        text-align: center;
+    }
+}  
+ 
+.prices-box
+{
+     min-height: calc(100vh/2);
+
+    &:first-child
+    {
+        grid-column:  3 / span 2;
+        grid-row: 1 / span 3;
+        background-color: pink;
+        background-image:url('../img/prices-bg-image.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+
+    &:nth-child(2)
+    {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        background-color: rgb(135, 189, 34);
+        // position: relative;
+    }
+    &:nth-child(3)
+    {
+        grid-column: 5 / span 2;
+        grid-row: 2;  
+        background-color: #1a1397;
+        // position: relative;
+    }
+    &:nth-child(4)
+    {
+        grid-column: 1 / span 2;
+        grid-row: 3;  
+        background-color: hsl(123, 73%, 38%);
+        // position: relative;
+    }
+    &:nth-child(5)
+    {
+        grid-column: 5 / span 2;
+        grid-row: 3;
+        background-color: black; 
+        // position: relative;        
+    }
+    &:nth-child(6)
+    {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: rgb(226, 160, 37); 
+        opacity: .2;
+    }
+    &:nth-child(7)
+    {
+        grid-column: 6;
+        grid-row: 3;
+        background-color: purple; 
+        opacity: .2;
+    }
+    img
+    {
+        height: 100%;
+        width: 67%;
+      
+    }
+    table
+    {
+        width: 100%;
+        position: relative;
+ 
+        top: 40%;
+        // position: absolute;
+        // bottom: 20px;
+    }
+    td
+    {
+        &:first-child
+        {
+            text-align: left;
+            padding-left: 10%;
+        }
+        &:nth-child(2)
+        {
+            text-align: right;
+            padding-right: 10%;
+        }
+       
+    }
+}
+

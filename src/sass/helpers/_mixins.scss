@@ -89,7 +89,10 @@
     will-change: transform;
 }
 
-
+// *--------- SCALE ---------*
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
 
 
 // // -------------------------------
@@ -145,7 +148,7 @@
 //     color: transparent;
 // }
 
-// // *--------- CENTER vertically and horizontally ---------*
+// *--------- CENTER vertically and horizontally ---------*
 // @mixin both-center($top: -50%, $left: -50%, $position: relative) {
 //     position: $position;
 //     top: 50%;
