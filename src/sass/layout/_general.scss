@@ -26,6 +26,16 @@ body
     overflow: hidden;
     @extend %clearfix;
 }
+.section
+{
+    margin: $section-top-bottom-margins 0;
+    
+    > h2
+    {
+        margin-bottom: $section-h2-bottom-margin;
+    }
+}
+
 
 h2
 {
@@ -34,6 +44,7 @@ h2
     font-size: 2*$general-font-size;
     font-weight: 700;
     padding: 10px;
+    text-align: center;
 
 }
 

@@ -32,6 +32,30 @@
     // }
 
 
+//CENTERING SELECTED ELEMENT USING GRID
+@mixin center-one-element($element-selector){  //include to parent element
+    display: grid;  
+    & > #{$element-selector}       // element to center - chosen child of parent
+    {
+        margin: auto;
+    }  
+}
+//CENTERING MANY ELEMENTS USING GRID
+@mixin center-children(){  //include to parent element
+    display: grid;
+    & > *              // elements to center - all children of parent
+    {
+        margin: auto;
+    }  
+}
+// CENTERING VERTICALLY RELATIVE TO THE PARENT
+@mixin v-center(){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 // OPACITY ELEMENT WITHOUT INSIDE ELEMENTS
 
 @mixin opacity($opacity,$bg-color,$space-in-px){

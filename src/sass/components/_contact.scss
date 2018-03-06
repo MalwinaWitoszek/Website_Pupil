@@ -1,0 +1,143 @@
+.contact-container
+{
+    @extend .container;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: white solid 10px;
+    min-height: calc(100vh - 10px);
+    background-color: $gallery-background-color;
+    
+
+    & > :first-child       ///top banner
+    {
+        grid-column: 1 / span 9;
+        grid-row: 1 / span 2;
+        background-color: green;
+        
+        & > :first-child  //dog img
+        {
+            float: left;
+
+        }
+        & > :last-child    //cat img
+        {
+            float: right;
+        }
+        img   //fit images to container width
+        {
+            width: 20%;
+            height: 30%;
+        }
+    }
+
+    & > :nth-child(2)        //house icon
+    {
+        grid-column: 1 / span 3;
+        grid-row: 3 / span 2;
+        background-color: pink;
+        position: relative; 
+    }
+
+    & > :nth-child(3)             //phone icon
+    {
+        grid-column: 4 / span 3;
+        grid-row: 3 / span 2;  
+        background-color: gold;
+        position: relative; 
+    }
+
+    & > :nth-child(2), & > :nth-child(3)   //separating icons
+    {
+        &::before    //separating line icons
+        {
+            content: '';
+            border-right: 4px solid black;
+            @include v-center; //centering vertically
+            right: -2px;
+            height: $contact-icon-dimension;
+            z-index: 2;
+        }
+    }
+
+    & > :nth-child(4)                 //clock icon
+    {
+        grid-column: 7 / span 3;
+        grid-row: 3 / span 2;  
+        background-color: blue;
+    }
+    & > :nth-child(5)         // address      
+    {
+        grid-column: 1 / span 3;
+        grid-row: 5 / span 2; 
+        background-color: grey;
+        
+    }
+    & > :nth-child(6)           // telephone number
+    {
+        grid-column: 4 / span 3;
+        grid-row: 5 / span 2;  
+        background-color: red;
+        
+    }
+    & > :nth-child(7)           //opening hours
+    {
+        grid-column: 7 / span 3;
+        grid-row: 5 / span 2;  
+        background-color: yellow;
+        
+    }
+    & > :nth-child(8)           //map
+    {
+        grid-column: 1 / span 5;
+        grid-row: 7 / span 3;   
+        background-color: olive;
+        padding-right: 15px;
+        
+    }
+
+    & > :nth-child(9)           //photo of the salon
+    {
+        grid-column: 6 / span 4;
+        grid-row: 7 / span 3;   
+        background-color: orangered;
+        padding-left: 15px;
+        
+    }
+
+    & > :nth-child(8), & > :nth-child(9)
+    {
+        @include center-one-element(img);
+        p
+        {
+           padding-top: 20px;
+           padding-left: 35px;
+            // height: 20%;
+
+        }
+        img 
+        {
+            width: 90%;
+            height: calc(100% - 50px);
+        }
+    }
+
+    .center
+    {
+        @include center-children()
+    }
+
+    .contact-icon > img      //contact big icons
+    {
+        width: $contact-icon-dimension;
+        height: $contact-icon-dimension;
+
+    }
+    .contact-data > p   //contact informations
+    {
+        margin: 0 14% auto 14%;
+        text-align: justify;
+    }
+}
+
+
