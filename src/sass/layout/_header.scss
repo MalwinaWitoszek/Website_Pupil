@@ -2,16 +2,19 @@
 header
 {
     background-color: $header-background-color;
-    min-height: 75px;
+    min-height: 62px;
     width: 100%;
     position: fixed;
     top: 0;
-    // height: $header-base-height;
+    height: $header-base-height;
     transition: all 0.5s;
     z-index: 100;
-
+    box-shadow: 0 -6px 11px 3px #D1D1D1; 
     
-
+    & > div
+    {
+        height: 100%;
+    }
    
 }
 #logo
@@ -20,20 +23,32 @@ header
     height: $header-logo-base-height;
     width: auto;
     transition: all 0.5s;
+    @include v-center
+    img
+    {
+        height: 100%;
+        width: auto;
+    }
+    
 }
 #top-nav
 {
     float: right;
+    height: 100%;
+    position: relative;
 
     & ul
     {
-        margin: 0;
+        height: 100%;
+        margin: 3.5%;
         padding: 0;
         list-style: none;
+        
     }
 
     & li
     {
+        height: 100%;
         display: inline-block;
         margin-left: 45px;
         position: relative;
@@ -43,12 +58,14 @@ header
         line-height: $header-base-height;
         text-transform: uppercase;
         transition: all 0.5s;
+        
     }
 
     & a
     {   
         text-transform: uppercase;
         color: $nav-text-color;
+       
 
         &:hover {
             color: $nav-text-color-active;
@@ -78,14 +95,10 @@ header
     height: $header-change-height;
 }
 
-.scroll-header-logo
-{
-    height: $header-logo-change-height;
-}
-
 .scroll-header-li
 {
-    font-size: $nav-change-font-size;
+    font-size: $nav-change-font-size!important;
+    color: grey;
 }
 
 

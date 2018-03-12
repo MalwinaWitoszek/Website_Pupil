@@ -14,7 +14,7 @@ body
     font-size: $general-font-size;
     font-weight: $general-font-weight;
     margin: 0;
-    line-height: 1.8em;
+    line-height: $general-line-height;
     text-align: $general-text-align;
     color: $general-text-color;
 }
@@ -26,27 +26,59 @@ body
     overflow: hidden;
     @extend %clearfix;
 }
-.section
+section
 {
-    margin: $section-top-bottom-margins 0;
-    
-    > h2
+    box-shadow: 0 0 6px 2px #171717; 
+
+    &:not(:first-child)
     {
-        margin-bottom: $section-h2-bottom-margin;
+        padding: $section-top-bottom-padding 0;
+        
+
+        > h2
+        {
+            margin-bottom: $section-h2-bottom-margin;
+        }
     }
+    &:first-child
+    {
+        margin: 2.5% 0 0 0;
+    }
+
 }
+.footer
+{
+    color: white;
+    background-color: $general-color;   
+    width: 100%;
+    height: auto;
+    font-size: $general-font-size - 2px;
+    text-align: center;
+    padding: 5px 0;
+}
+h2, h3
+{
 
-
+    color:$general-text-color;
+    font-weight: $general-font-weight  ;
+    padding: $general-font-size 0;
+    text-align: center;
+    font-family: $heading-font-family;
+}
 h2
 {
-    background-color: goldenrod;
-    color: red;
-    font-size: 2*$general-font-size;
-    font-weight: 700;
-    padding: 10px;
-    text-align: center;
-
+    font-size: $heading-h2-font-size;
+    font-style: $headings-font-style;
 }
+h3
+{
+    font-size: $heading-h3-font-size;
+}
+//google maps
+#gmap_canvas img
+{   max-width:  none!important;
+    background: none!important}
+
 
 
 // // -------------------------------

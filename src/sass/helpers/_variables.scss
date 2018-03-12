@@ -1,25 +1,31 @@
 //Typography
 $general-font-size: 16px;
-$heading-h1-font-size: 3.2*$general-font-size;
-$heading-h2-font-size: 2.2*$general-font-size;
-$heading-h3-font-size: 1.7*$general-font-size;
-$general-font-family: "Lato", sans-serif;
+$general-font-family: 'Lato', cursive;  // 400, 700
 $general-font-weight: 400;
 $general-font-weight-bold: 700;
+$general-line-height: 1.8em;
 $general-text-align: justify;
+$heading-font-family: 'Lemonada', cursive;
+$heading-h1-font-family: 'Lemon', cursive;
+$heading-h1-font-size: 3.2*$general-font-size;
+$heading-h2-font-size: 2*$general-font-size;
+$heading-h3-font-size: 1.3*$general-font-size;
+$heading-h1-line-height: $general-line-height;
+$headings-font-style: italic;
 $headers-text-align: center;
-$nav-font-family: "Dosis", Arial, sans-serif; // 400, 700
+$nav-font-family: 'Trade Winds', cursive;
 $nav-font-size: 16px;
-$nav-change-font-size: 12px;
+$nav-change-font-size: 14px;
 
 //Colors
-$general-background-color: rgb(230, 221, 221);
+$general-background-color: white;
 $general-text-color: rgb(5, 65, 18);
 $general-color: #26CBAF;
 $header-background-color: white;
+$header-text-color: #F70000;
 $gallery-background-color: white;
 $offer-background-color: white;
-$headers-background-color: #a17f7f; 
+$headers-background-color: rgb(68, 65, 65); 
 
 $nav-text-color: #F70000;
 $nav-text-color-active: lighten($nav-text-color, 35);
@@ -27,21 +33,23 @@ $nav-text-color-active: lighten($nav-text-color, 35);
 
 //dimensions
 $general-container-width: 90%;
-$section-top-bottom-margins: 8%;
-$header-base-height: 85px;
-$header-change-height: 60px;
-$header-logo-base-height: 60px;
-$header-logo-change-height: 20px;
-$gallery-grid-gap : 15px;
+$section-top-bottom-padding: 6%;
+$header-base-height: 11%;
+$header-change-height: 9.5%;
+$header-logo-base-height: 85%;
+$gallery-grid-gap : 25px;
+$gallery-container-width: 75%;
 $gallery-max-width: 1200px;
 $offer-box-min-height : 100px;
-$offer-grid-gap : 15px;
-$contact-icon-dimension: 40%;
+$offer-grid-gap : 30px;
+$contact-icon-dimension: 30%;
 
 //margin & padding
 $section-h2-top-margin: 70px;
 $section-h2-bottom-margin: 50px;
-
+$contact-top-banner-padding: 40px;
+$presentation-paragrapf-margin: 40px;
+$animate-delay-slideshow: 4s;
 
 // // ---------------------
 // //     BASE

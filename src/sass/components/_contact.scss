@@ -7,26 +7,29 @@
     border: white solid 10px;
     min-height: calc(100vh - 10px);
     background-color: $gallery-background-color;
-    
+    position: relative;
 
     & > :first-child       ///top banner
     {
         grid-column: 1 / span 9;
         grid-row: 1 / span 2;
-        background-color: green;
+        background-color: $general-color;
+        @include v-center;
+        padding: $contact-top-banner-padding 0;
         
         & > :first-child  //dog img
         {
             float: left;
+            margin: 3px 5% 0 5%;
+            width: 12%;
+            height: 50%;
 
         }
-        & > :last-child    //cat img
+        & > :nth-child(2)    //cat img
         {
             float: right;
-        }
-        img   //fit images to container width
-        {
-            width: 20%;
+            margin: 0 5%;
+            width: 10%;
             height: 30%;
         }
     }
@@ -35,7 +38,7 @@
     {
         grid-column: 1 / span 3;
         grid-row: 3 / span 2;
-        background-color: pink;
+     
         position: relative; 
     }
 
@@ -43,7 +46,7 @@
     {
         grid-column: 4 / span 3;
         grid-row: 3 / span 2;  
-        background-color: gold;
+      
         position: relative; 
     }
 
@@ -52,7 +55,7 @@
         &::before    //separating line icons
         {
             content: '';
-            border-right: 4px solid black;
+            border-right: 6px solid $general-color;
             @include v-center; //centering vertically
             right: -2px;
             height: $contact-icon-dimension;
@@ -64,34 +67,34 @@
     {
         grid-column: 7 / span 3;
         grid-row: 3 / span 2;  
-        background-color: blue;
+        
     }
     & > :nth-child(5)         // address      
     {
         grid-column: 1 / span 3;
         grid-row: 5 / span 2; 
-        background-color: grey;
+        
         
     }
     & > :nth-child(6)           // telephone number
     {
         grid-column: 4 / span 3;
         grid-row: 5 / span 2;  
-        background-color: red;
+     
         
     }
     & > :nth-child(7)           //opening hours
     {
         grid-column: 7 / span 3;
         grid-row: 5 / span 2;  
-        background-color: yellow;
+      
         
     }
     & > :nth-child(8)           //map
     {
         grid-column: 1 / span 5;
         grid-row: 7 / span 3;   
-        background-color: olive;
+  
         padding-right: 15px;
         
     }
@@ -100,9 +103,15 @@
     {
         grid-column: 6 / span 4;
         grid-row: 7 / span 3;   
-        background-color: orangered;
+   
         padding-left: 15px;
-        
+        img 
+        {
+            width: 90%;
+            height: calc(100% - 50px);
+            border: 2px solid $general-color;
+
+        }
     }
 
     & > :nth-child(8), & > :nth-child(9)
@@ -112,14 +121,9 @@
         {
            padding-top: 20px;
            padding-left: 35px;
-            // height: 20%;
+            
+        }
 
-        }
-        img 
-        {
-            width: 90%;
-            height: calc(100% - 50px);
-        }
     }
 
     .center
@@ -129,15 +133,28 @@
 
     .contact-icon > img      //contact big icons
     {
-        width: $contact-icon-dimension;
+        width: calc($contact-icon-dimension - 10%);
         height: $contact-icon-dimension;
 
-    }
+    }   
     .contact-data > p   //contact informations
     {
         margin: 0 14% auto 14%;
         text-align: justify;
     }
+
+    .contact-icon > img   //hover effect on icons
+    {
+        transition: all .2s ease-in-out;
+        
+                    &:hover
+                    {
+                        transform: scale(1.1);
+                    }
+    }
+
 }
+
+
 
 

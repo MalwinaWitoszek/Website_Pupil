@@ -1,0 +1,44 @@
+.presentation-salon
+{
+    padding-bottom: 1.8*$general-line-height;
+    img:first-of-type
+    {
+        margin: 2% 4% .7% 2%;
+        width: 40%;
+        float: left;
+    }
+
+    h2
+    {
+        line-height: $general-line-height;
+        padding-bottom: .8*$general-line-height;
+    }
+
+}
+.presentation-owner
+{
+    padding: 0 10%;
+    margin: 0 auto;
+
+    img:first-of-type
+    {
+        margin-left: $presentation-paragrapf-margin;
+        margin-top: $general-font-size / 2;
+        width: 30%;
+        max-width: 220px;
+        float: right;
+        border: 3px solid $general-color;
+    }
+    img:last-of-type
+    {   
+        margin: 2% 40% 0 40%;
+        width: 15%;
+    }
+}
+#presentation-area
+{
+    h3
+    {
+        padding-bottom: .6*$general-line-height;
+    }
+}
