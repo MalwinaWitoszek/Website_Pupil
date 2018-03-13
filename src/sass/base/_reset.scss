@@ -51,15 +51,6 @@ ol, ul {
    list-style: none;
 }
 
-blockquote, q {
-   quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-   content: "";
-   content: none;
-}
 
 table {
    border-collapse: collapse;
@@ -70,31 +61,3 @@ a {
    text-decoration: none;
 }
 
-input,
-textarea,
-button {
-   -webkit-appearance: none;
-   -webkit-border-radius: 0;
-   border-radius: 0;
-   outline: none;
-}
-
-input[type="radio"] {
-   -webkit-appearance: radio;
-}
-
-input[type="checkbox"] {
-   -webkit-appearance: checkbox;
-}
-
-// .outline {
-//    position: absolute;
-//    clip: rect(0px 0px 0px 0px);
-//    *clip: rect (0 0 0 0);
-// }
-
-// mark {
-//    background: none;
-
-//    color: inherit;
-// }

@@ -44,16 +44,6 @@ ol, ul {
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -61,22 +51,6 @@ table {
 
 a {
   text-decoration: none;
-}
-
-input,
-textarea,
-button {
-  -webkit-appearance: none;
-  border-radius: 0;
-  outline: none;
-}
-
-input[type="radio"] {
-  -webkit-appearance: radio;
-}
-
-input[type="checkbox"] {
-  -webkit-appearance: checkbox;
 }
 
 .presentation-salon {
@@ -927,16 +901,18 @@ header > div {
 }
 
 #top-nav {
-  float: right;
   height: 100%;
   position: relative;
 }
 
 #top-nav ul {
-  height: 100%;
-  margin: 3.5%;
-  padding: 0;
-  list-style: none;
+  float: right;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
 }
 
 #top-nav li {
@@ -973,7 +949,7 @@ header > div {
   width: 0%;
   background-color: #F70000;
   position: absolute;
-  top: 0;
+  top: -22.4px;
   -webkit-transition: all ease-in-out 350ms;
   transition: all ease-in-out 350ms;
 }
@@ -1086,7 +1062,4 @@ header > div {
   clear: both;
 }
 
-/*----------------------------*/
-/*        COPYRIGHT 2016      */
-/*        www.eduweb.pl       */
 /*----------------------------*/

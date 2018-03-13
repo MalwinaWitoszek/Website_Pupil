@@ -7,17 +7,10 @@
 @import "base/reset";
 // *--------- TYPOGRAPHY ---------*
 @import "base/typography";
+
 // ---------------------
 //     COMPONENTS
 // ---------------------
-// *--------- NAV ---------*
-@import "components/nav";
-// *--------- FORMS ---------*
-@import "components/forms";
-// *--------- SOCIAL ---------*
-@import "components/social";
-// *--------- LIGHTBOX ---------*
-@import "components/lightbox";
 // *--------- PRESENTATION ---------*
 @import "components/presentation";
 // *--------- OFFER ---------*
@@ -41,19 +34,8 @@
 @import "layout/general";
 // *--------- HEADER ---------*
 @import "layout/header";
-// *--------- CONTENT ---------*
-@import "layout/content";
-// *--------- FOOTER ---------*
-@import "layout/footer";
 // *---------  PARALLAX ---------*
 @import "layout/parallax";
-// ---------------------
-//     MODULES
-// ---------------------
-// *--------- PROJECTS ---------*
-@import "modules/projects";
-// *--------- SLIDER ---------*
-@import "modules/slider";
 // ---------------------
 //     EXTENDS
 // ---------------------
@@ -63,10 +45,3 @@
 /*----------------------------*/
 
 
-/*        COPYRIGHT 2016      */
-
-
-/*        www.eduweb.pl       */
-
-
-/*----------------------------*/

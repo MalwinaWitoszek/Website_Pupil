@@ -1,0 +1,12 @@
+1. smooth scrolling - po najechaniu na menu
+2. media queries
+3. menu hamburger
+4. srawdzic jak w innych przegladarkach
+5. wendor prefiksy dl IE dla css grid
+6. skrypty async? i po wczytaniu drzewa DOM? scalić i zminimalizowac?
+7. dołożyć do górnego menu numer telefonu
+8. pamiętac ze na cloudinary.com mam zdjecia w chmurze
+9. pamietać o programie tinypng do zmniejszania zdjecia
+10.w sekcji head dodac odpowiednie słowa kluczowe, tytuł itp
+11.dodać ikonke łapy przy nazwie dokumentu w przegladarce
+12.wypuscic na github

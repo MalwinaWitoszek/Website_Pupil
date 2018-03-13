@@ -23,7 +23,8 @@ header
     height: $header-logo-base-height;
     width: auto;
     transition: all 0.5s;
-    @include v-center
+    @include v-center;
+
     img
     {
         height: 100%;
@@ -33,17 +34,15 @@ header
 }
 #top-nav
 {
-    float: right;
     height: 100%;
     position: relative;
 
     & ul
-    {
-        height: 100%;
-        margin: 3.5%;
-        padding: 0;
-        list-style: none;
-        
+    {   
+        float: right;
+        height: auto;   
+        @include v-center
+        right: 0;
     }
 
     & li
@@ -65,7 +64,7 @@ header
     {   
         text-transform: uppercase;
         color: $nav-text-color;
-       
+
 
         &:hover {
             color: $nav-text-color-active;
@@ -84,7 +83,7 @@ header
             width: 0%;
             background-color: $nav-text-color;
             position: absolute;  // position absolute for the "li"
-            top: 0;
+            top: -1.4*$general-font-size;
             transition: all ease-in-out 350ms;
         }
     }
@@ -101,55 +100,3 @@ header
     color: grey;
 }
 
-
-
-
-
-
-
-
-// // -------------------------------
-// //     HEADER VARIABLES
-// // -------------------------------
-// // *--------- TYPOGRAPHY ---------*
-// // *--------- COLORS ---------*
-// // ----------------------------
-// //     HEADER STYLES
-// // ----------------------------
-// @include comment("header");
-// .header {
-//     height: 265px;
-//     margin-top: 25px;
-//     margin-bottom: 60px;
-//     position: relative;
-//     z-index: 2;
-//     .home & {
-//         margin-bottom: 610px;
-//     }
-//     &__logo {
-//         display: block;
-//         width: 151px;
-//         height: 61px;
-//         margin-left: -75px;
-//         background: yellow url(../images/logo.png) 0 0 no-repeat;
-//         position: absolute;
-//         top: 75px;
-//         left: 50%;
-//         font-size: 0;
-//         line-height: 0;
-//     }
-//     &__social {
-//         margin-top: 75px;
-//         float: left;
-//     }
-//     &__search {
-//         margin-top: 75px;
-//         float: right;
-//     }
-//     &__search-field {
-//         padding-right: 45px;
-//         background-image: url(../images/search_icon.png);
-//         background-position: right center;
-//         background-repeat: no-repeat;
-//     }
-// }
