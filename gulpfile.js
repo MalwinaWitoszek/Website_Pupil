@@ -8,8 +8,8 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");                    //kompilacja scss --> css i minifikacja csss
-var	autoprefixer = require('gulp-autoprefixer');    // dodanie wendor prefiksów 
-var	watch = require('gulp-watch');                      // nasłuchiwanie zmian w plikach  
+var	autoprefixer = require('gulp-autoprefixer');    // dodanie wendor prefiksów
+var	watch = require('gulp-watch');                      // nasłuchiwanie zmian w plikach
 var plumber = require('gulp-plumber');              // zapobiega przerywaniu zadań - obsługa błędów
 var del = require("del");
 var useref = require('gulp-useref');        // konkatenacja plików js bez minifikacji
@@ -22,16 +22,16 @@ var browserSync = require('browser-sync').create(); // przeładowanie przegląda
 
 // styleSheets
 
-gulp.task('styles', function() {	    
+gulp.task('styles', function() {
     return gulp.src("src/sass/main.scss")
     .pipe(plumber())  //  zapobiega przerywaniu zadań - obsługa błędów
     .pipe(sass.sync({  //   kompilacja SCSS → CSS
-        outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed 
-    }))     
-    .pipe(autoprefixer({browsers: ["last 2 version"]}))	  // dodanie wendor prefiksów  
+        outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed
+    }))
+    .pipe(autoprefixer({browsers: ["last 2 version"]}))	  // dodanie wendor prefiksów
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream())	// przeładowanie przeglądarki
-});	
+});
 
 
 //  JavaScript
@@ -40,10 +40,25 @@ gulp.task('styles', function() {
 gulp.task("scripts", function() {
     return gulp.src("src/*.html")
     .pipe(useref())
-    .pipe(gulpif("*.js",uglify()))      // jeżeli plik ma rozszerzenie js, to wywołujemy uglify 
+    .pipe(gulpif("*.js",uglify()))      // jeżeli plik ma rozszerzenie js, to wywołujemy uglify
     .pipe(gulp.dest("dist/"));
     })
-
+ // w index html nalezy zgodnie ze wzorem podac:
+// przykład do USEREF - konkatenacja plików, należy dodać:
+// <html>
+//     <head>
+//         <!-- build:css css/combined.css -->                tutaj scieżka i nazwa nowego pliku
+//         <link href="css/one.css" rel="stylesheet">
+//         <link href="css/two.css" rel="stylesheet">
+//         <!-- endbuild -->
+//     </head>
+//     <body>
+//         <!-- build:js js/combined.js -->                    tutaj scieżka i nazwa nowego pliku
+//         <link href="js/one.js" rel="text/javascript">
+//         <link href="js/two.js" rel="text/javascript">
+//         <!-- endbuild -->
+//     </body>
+// </html>
 
 
 //  Images
@@ -60,15 +75,15 @@ gulp.task("images", function() {
 // Automatyzacja
 
 gulp.task('watch', function() {	                // nasłuchiwanie zmian w plikach
-    gulp.watch('src/sass/**/*.scss', ['styles']);	    
+    gulp.watch('src/sass/**/*.scss', ['styles']);
     gulp.watch(["src/*.html", "src/**/*.js"], browserSync.reload);
-});	
+});
     // gulp.watch(["src/*.scripts", "src/**/*.js"]).on('change', browserSync.reload);
 
 
 gulp.task('clean', function() {	                // usunięcie katalogu dist - z wersją dystrybucyjna projektu
     return del("dist/")
-});	
+});
 
 gulp.task("copy", function() {
     return gulp.src(["src/css/**/*.css", "src/img/*"], {
@@ -89,10 +104,10 @@ gulp.task('server-sync', function() {     // stworzenie serwera w katalogu src
 
 
 
-// wykonywanie sekwencji zadań
+// wykonywanie sekwencji zadań - wywoanie gulp build
 // Jeżeli wyjdzie GULP 4 to zamienić to na gulp.series !
 
-gulp.task("build", function() {  
+gulp.task("build", function() {
     runSequence("clean", "scripts", "copy", "images");
     })
 
@@ -103,21 +118,7 @@ gulp.task("default", ["styles", "server-sync", "watch"]);   //wywołanie w termi
 
 
 
-// przykład do USEREF - konkatenacja plików, należy dodać:
-// <html>
-//     <head>
-//         <!-- build:css css/combined.css -->                tutaj scieżka i nazwa nowego pliku
-//         <link href="css/one.css" rel="stylesheet">
-//         <link href="css/two.css" rel="stylesheet">
-//         <!-- endbuild -->
-//     </head>
-//     <body>
-//         <!-- build:js js/combined.js -->                    tutaj scieżka i nazwa nowego pliku
-//         <link href="js/one.js" rel="text/javascript">
-//         <link href="js/two.js" rel="text/javascript">
-//         <!-- endbuild -->
-//     </body>
-// </html>
+
 
 
 //układ katalogów:
