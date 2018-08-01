@@ -534,7 +534,8 @@ h1 span:last-child {
 .gallery-container .main-img {
   grid-column: 2 / span 3;
   grid-row: 2 / span 3;
-  border: 15px solid #26CBAF;
+  -webkit-box-shadow: 0 0 5px 5px #26CBAF;
+          box-shadow: 0 0 5px 5px #26CBAF;
 }
 
 .gallery-container :nth-child(2) {
@@ -628,7 +629,8 @@ h1 span:last-child {
 .contact-container > :first-child {
   grid-column: 1 / span 9;
   grid-row: 1 / span 2;
-  background-color: #26CBAF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(87%, #26CBAF), to(white));
+  background-image: linear-gradient(white, #26CBAF 87%, white);
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -871,28 +873,35 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  height: 11%;
+  height: 11vh;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 100;
-  -webkit-box-shadow: 0 -6px 11px 3px #D1D1D1;
-          box-shadow: 0 -6px 11px 3px #D1D1D1;
+  -webkit-box-shadow: 0 -6px 11px 3px #d1d1d1;
+          box-shadow: 0 -6px 11px 3px #d1d1d1;
 }
 
 header > div {
   height: 100%;
 }
 
+header .container, header .offer-container, header .prices-container, header .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #logo {
-  float: left;
   height: 85%;
   width: auto;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 #logo img {
@@ -902,56 +911,162 @@ header > div {
 
 #top-nav {
   height: 100%;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 850px) {
+  #top-nav {
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 #top-nav ul {
-  float: right;
   height: auto;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 850px) {
+  #top-nav ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 65vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background-color: white;
+    -webkit-transform: translateX(65vw);
+            transform: translateX(65vw);
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+  }
 }
 
 #top-nav li {
-  height: 100%;
-  display: inline-block;
+  min-height: 11vh;
   margin-left: 45px;
   position: relative;
   font-family: "Trade Winds", cursive;
   font-weight: 700;
   font-size: 16px;
-  line-height: 11%;
+  line-height: 11vh;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-#top-nav a {
+@media (max-width: 850px) {
+  #top-nav li {
+    display: block;
+    padding: 20px 6vw 0;
+    line-height: 1;
+    width: auto;
+  }
+}
+
+#top-nav li:first-child {
+  height: 11vh;
+  padding-top: 40px;
+}
+
+#top-nav a,
+#top-nav .hamburger-menu,
+#top-nav .close-hamburger-menu {
   text-transform: uppercase;
   color: #F70000;
 }
 
-#top-nav a:hover {
+#top-nav a:hover,
+#top-nav .hamburger-menu:hover,
+#top-nav .close-hamburger-menu:hover {
   color: #ffabab;
 }
 
-#top-nav a:hover::before {
+#top-nav a:hover::before,
+#top-nav .hamburger-menu:hover::before,
+#top-nav .close-hamburger-menu:hover::before {
   width: 100%;
 }
 
 #top-nav a::before {
-  content: '';
+  content: "";
   display: block;
-  height: 3px;
+  height: 2px;
   width: 0%;
   background-color: #F70000;
   position: absolute;
-  top: -22.4px;
+  top: 17.6px;
   -webkit-transition: all ease-in-out 350ms;
   transition: all ease-in-out 350ms;
+}
+
+@media (max-width: 850px) {
+  #top-nav a::before {
+    top: 49.6px;
+  }
+}
+
+#top-nav .mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity linear 150ms;
+  transition: opacity linear 150ms;
+}
+
+@media (max-width: 850px) {
+  #top-nav .mobile-overlay {
+    display: block;
+  }
+}
+
+#top-nav .open-menu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#top-nav .open-overlay {
+  z-index: 1;
+  opacity: 1;
+}
+
+#top-nav .hamburger-menu,
+#top-nav .close-hamburger-menu {
+  display: none;
+  text-align: right;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+@media (max-width: 850px) {
+  #top-nav .hamburger-menu,
+  #top-nav .close-hamburger-menu {
+    display: block;
+  }
+}
+
+#top-nav .close-hamburger-menu {
+  font-size: 24px;
 }
 
 .scroll-header {
@@ -1047,19 +1162,6 @@ header > div {
   height: 100%;
   background-color: #444141;
   opacity: 0.5;
-}
-
-.container, .offer-container, .prices-container, .contact-container {
-  *zoom: 1;
-}
-
-.container:before, .offer-container:before, .prices-container:before, .contact-container:before, .container:after, .offer-container:after, .prices-container:after, .contact-container:after {
-  content: " ";
-  display: table;
-}
-
-.container:after, .offer-container:after, .prices-container:after, .contact-container:after {
-  clear: both;
 }
 
 /*----------------------------*/

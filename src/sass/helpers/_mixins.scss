@@ -2,43 +2,39 @@
 // MEDIA RULES - BREAKPOINTS
 
 @mixin breakpoints($point) {
-    @if $point == XXL {
-    @media (min-width: 1600px) { @content; }
+    @if $point == desktopXL {
+    @media (min-width: $media-desktopXL) { @content; }
     }
-    @else if $point == XL {
-    @media (max-width: 1200px) { @content; }
+    @else if $point == desktop {
+    @media (max-width: $media-desktop) { @content; }
     }
-    @else if $point == L {
-    @media (max-width: 1000px) { @content; }
+    @else if $point == laptop {
+    @media (max-width: $media-laptop) { @content; }
     }
-    @else if $point == M {
-    @media (max-width: 850px) { @content; }
+    @else if $point == tablet {
+    @media (max-width: $media-tablet) { @content; }
     }
-    @else if $point == S {
-    @media (max-width: 710px) { @content; }
+    @else if $point == mobile-landscape {
+    @media (max-width: $media-mobile-landscape) { @content; }
     }
-    @else if $point == XS {
-    @media (max-width: 650px) { @content; }
-    }
-    @else if $point == XXS {
-    @media (max-width: 400px) { @content; }
+    @else if $point == mobile-portrait {
+    @media (max-width: $media-mobile-portrait) { @content; }
     }
     }
-    
     //example:
     // .header {
     // height: 100px;
-    // @include breakpoints(S) { height: 80px; }
+    // @include breakpoints(tablet) { height: 80px; }
     // }
 
 
 //CENTERING SELECTED ELEMENT USING GRID
 @mixin center-one-element($element-selector){  //include to parent element
-    display: grid;  
+    display: grid;
     & > #{$element-selector}       // element to center - chosen child of parent
     {
         margin: auto;
-    }  
+    }
 }
 //CENTERING MANY ELEMENTS USING GRID
 @mixin center-children(){  //include to parent element
@@ -46,7 +42,7 @@
     & > *              // elements to center - all children of parent
     {
         margin: auto;
-    }  
+    }
 }
 // CENTERING VERTICALLY RELATIVE TO THE PARENT
 @mixin v-center(){
@@ -60,7 +56,7 @@
 
 @mixin opacity($opacity,$bg-color,$space-in-px){
     display: inline-block;
-    position: relative; 
+    position: relative;
     &::before
     {
       content: "";
@@ -78,7 +74,7 @@
 // example:
 // .border       class of the text to border with opacity
 // {
-//     @include opacity(.3,$headers-background-color,70px)  
+//     @include opacity(.3,$headers-background-color,70px)
 // }
 
 // COMMENT

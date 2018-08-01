@@ -25,7 +25,7 @@ $header-background-color: white;
 $header-text-color: #F70000;
 $gallery-background-color: white;
 $offer-background-color: white;
-$headers-background-color: rgb(68, 65, 65); 
+$headers-background-color: rgb(68, 65, 65);
 
 $nav-text-color: #F70000;
 $nav-text-color-active: lighten($nav-text-color, 35);
@@ -34,7 +34,7 @@ $nav-text-color-active: lighten($nav-text-color, 35);
 //dimensions
 $general-container-width: 90%;
 $section-top-bottom-padding: 6%;
-$header-base-height: 11%;
+$header-base-height: 11vh;
 $header-change-height: 9.5%;
 $header-logo-base-height: 85%;
 $gallery-grid-gap : 25px;
@@ -43,6 +43,8 @@ $gallery-max-width: 1200px;
 $offer-box-min-height : 100px;
 $offer-grid-gap : 30px;
 $contact-icon-dimension: 30%;
+$mobile-menu-width: 65vw;
+
 
 //margin & padding
 $section-h2-top-margin: 70px;
@@ -50,4 +52,13 @@ $section-h2-bottom-margin: 50px;
 $contact-top-banner-padding: 40px;
 $presentation-paragrapf-margin: 40px;
 $animate-delay-slideshow: 4s;
+$mobile-padding: 6vw;
 
+// MEDIA RULES BREAKPOINTS (minimum-width):
+
+$media-desktopXL: 1900px; //the highest resolution desktops
+$media-desktop: 1281px;  //big desktops
+$media-laptop: 1025px;  //laptops & little desktops
+$media-tablet: 768px;  // tablets & Ipads
+$media-mobile-landscape: 481px;  // low resolution tablets & mobiles landscape
+$media-mobile-portrait: 320px;  // most of the mobiles portrait

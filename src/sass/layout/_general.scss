@@ -24,16 +24,16 @@ body
     width: $general-container-width;
     margin: 0 auto;
     overflow: hidden;
-    @extend %clearfix;
+    // @extend %clearfix;
 }
 section
 {
-    box-shadow: 0 0 6px 2px #171717; 
+    box-shadow: 0 0 6px 2px #171717;
 
     &:not(:first-child)
     {
         padding: $section-top-bottom-padding 0;
-        
+
 
         > h2
         {
@@ -49,7 +49,7 @@ section
 .footer
 {
     color: white;
-    background-color: $general-color;   
+    background-color: $general-color;
     width: 100%;
     height: auto;
     font-size: $general-font-size - 2px;
