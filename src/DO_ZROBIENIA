@@ -1,6 +1,6 @@
 ﻿1. smooth scrolling - po najechaniu na menu
 2. media queries
-3. menu hamburger
+//  3. menu hamburger
 4. srawdzic jak w innych przegladarkach
 sprawdzic walidatorem html i css czystosć kodu
 5. wendor prefiksy dl IE dla css grid

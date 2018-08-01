@@ -113,7 +113,8 @@ header .container {
     transition: all ease-in-out 350ms;
     @media (max-width: 850px) {
     //   display: none;
-    top: 3.1 * $general-font-size;
+    top: 3 * $general-font-size;
+    max-width: 20%;
     }
   }
   .mobile-overlay {
@@ -163,3 +164,30 @@ header .container {
   font-size: $nav-change-font-size !important;
   color: grey;
 }
+// back to top button
+#back-to-top{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border-radius: 8px;
+    padding: .5*$general-font-size;
+    font-size: 1.5*$general-font-size;
+    background-color: $back-to-top-button-background-color;
+    color: $back-to-top-button-text-color;
+    opacity: 0;
+    transition: all linear 650ms;
+
+
+    &.show {
+        opacity: .7;
+
+
+        &:hover{
+            font-size: 1.7*$general-font-size;
+            opacity: 1;
+            transition: all linear 650ms;
+        }
+    }
+
+}
+

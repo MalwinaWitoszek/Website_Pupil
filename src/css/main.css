@@ -993,7 +993,7 @@ header .container, header .offer-container, header .prices-container, header .co
 #top-nav a:hover,
 #top-nav .hamburger-menu:hover,
 #top-nav .close-hamburger-menu:hover {
-  color: #ffabab;
+  color: #ff7878;
 }
 
 #top-nav a:hover::before,
@@ -1016,7 +1016,8 @@ header .container, header .offer-container, header .prices-container, header .co
 
 @media (max-width: 850px) {
   #top-nav a::before {
-    top: 49.6px;
+    top: 48px;
+    max-width: 20%;
   }
 }
 
@@ -1076,6 +1077,31 @@ header .container, header .offer-container, header .prices-container, header .co
 .scroll-header-li {
   font-size: 14px !important;
   color: grey;
+}
+
+#back-to-top {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 24px;
+  background-color: #88e9d8;
+  color: #0a352d;
+  opacity: 0;
+  -webkit-transition: all linear 650ms;
+  transition: all linear 650ms;
+}
+
+#back-to-top.show {
+  opacity: .7;
+}
+
+#back-to-top.show:hover {
+  font-size: 27.2px;
+  opacity: 1;
+  -webkit-transition: all linear 650ms;
+  transition: all linear 650ms;
 }
 
 .parallax-img1 {
