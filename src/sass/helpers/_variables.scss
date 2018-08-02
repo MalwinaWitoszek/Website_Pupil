@@ -38,6 +38,7 @@ $section-top-bottom-padding: 6%;
 $header-base-height: 11vh;
 $header-change-height: 9.5%;
 $header-logo-base-height: 85%;
+$header-contact-phone-base-height: 25%;
 $gallery-grid-gap : 25px;
 $gallery-container-width: 75%;
 $gallery-max-width: 1200px;
@@ -48,6 +49,7 @@ $mobile-menu-width: 65vw;
 
 
 //margin & padding
+$header-contact-phone-bottom-margin: 12px;
 $section-h2-top-margin: 70px;
 $section-h2-bottom-margin: 50px;
 $contact-top-banner-padding: 40px;
@@ -60,6 +62,6 @@ $mobile-padding: 6vw;
 $media-desktopXL: 1900px; //the highest resolution desktops
 $media-desktop: 1281px;  //big desktops
 $media-laptop: 1025px;  //laptops & little desktops
-$media-tablet: 768px;  // tablets & Ipads
+$media-tablet: 825px;  // tablets & Ipads
 $media-mobile-landscape: 481px;  // low resolution tablets & mobiles landscape
 $media-mobile-portrait: 320px;  // most of the mobiles portrait

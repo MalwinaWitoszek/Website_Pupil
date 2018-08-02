@@ -909,6 +909,52 @@ header .container, header .offer-container, header .prices-container, header .co
   width: auto;
 }
 
+.contact-phone {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 25%;
+  width: auto;
+  font-family: "Lato", cursive;
+  font-weight: 400;
+  font-size: 12.6px;
+  font-style: italic;
+  margin-left: 21px;
+}
+
+@media (max-width: 1025px) {
+  .contact-phone {
+    display: none;
+  }
+}
+
+@media (max-width: 825px) {
+  .contact-phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 481px) {
+  .contact-phone {
+    display: none;
+  }
+}
+
+.contact-phone img {
+  height: 100%;
+  width: auto;
+  margin-right: 9.8px;
+}
+
 #top-nav {
   height: 100%;
   display: -webkit-box;
@@ -919,9 +965,8 @@ header .container, header .offer-container, header .prices-container, header .co
           align-items: center;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 825px) {
   #top-nav {
-    width: 100%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -935,7 +980,7 @@ header .container, header .offer-container, header .prices-container, header .co
   display: flex;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 825px) {
   #top-nav ul {
     display: block;
     -webkit-box-orient: vertical;
@@ -969,7 +1014,7 @@ header .container, header .offer-container, header .prices-container, header .co
   transition: all 0.5s;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 825px) {
   #top-nav li {
     display: block;
     padding: 20px 6vw 0;
@@ -980,7 +1025,7 @@ header .container, header .offer-container, header .prices-container, header .co
 
 #top-nav li:first-child {
   height: 11vh;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 #top-nav a,
@@ -1010,14 +1055,13 @@ header .container, header .offer-container, header .prices-container, header .co
   background-color: #F70000;
   position: absolute;
   top: 17.6px;
-  -webkit-transition: all ease-in-out 350ms;
-  transition: all ease-in-out 350ms;
+  -webkit-transition: all ease-in-out 550ms;
+  transition: all ease-in-out 550ms;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 825px) {
   #top-nav a::before {
-    top: 48px;
-    max-width: 20%;
+    display: none;
   }
 }
 
@@ -1035,7 +1079,7 @@ header .container, header .offer-container, header .prices-container, header .co
   transition: opacity linear 150ms;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 825px) {
   #top-nav .mobile-overlay {
     display: block;
   }
@@ -1059,7 +1103,7 @@ header .container, header .offer-container, header .prices-container, header .co
   font-size: 48px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 825px) {
   #top-nav .hamburger-menu,
   #top-nav .close-hamburger-menu {
     display: block;
@@ -1067,7 +1111,7 @@ header .container, header .offer-container, header .prices-container, header .co
 }
 
 #top-nav .close-hamburger-menu {
-  font-size: 24px;
+  font-size: 35.2px;
 }
 
 .scroll-header {
