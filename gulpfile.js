@@ -28,7 +28,7 @@ gulp.task('styles', function() {
     .pipe(sass.sync({  //   kompilacja SCSS → CSS
         outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed
     }))
-    .pipe(autoprefixer({browsers: ["last 2 version"]}))	  // dodanie wendor prefiksów
+    .pipe(autoprefixer({ grid: true }))	  // dodanie wendor prefiksów
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream())	// przeładowanie przeglądarki
 });
@@ -54,8 +54,8 @@ gulp.task("scripts", function() {
 //     </head>
 //     <body>
 //         <!-- build:js js/combined.js -->                    tutaj scieżka i nazwa nowego pliku
-//         <link href="js/one.js" rel="text/javascript">
-//         <link href="js/two.js" rel="text/javascript">
+//          <script type="text/javascript" src="scripts/one.js"></script>
+//          <script type="text/javascript" src="scripts/two.js"></script>
 //         <!-- endbuild -->
 //     </body>
 // </html>

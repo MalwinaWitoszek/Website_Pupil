@@ -24,7 +24,6 @@ body
     width: $general-container-width;
     margin: 0 auto;
     overflow: hidden;
-    // @extend %clearfix;
 }
 section
 {
@@ -40,7 +39,7 @@ section
             margin-bottom: $section-h2-bottom-margin;
         }
     }
-    &:first-child
+    &:first-child:not(#presentation-slideshow)
     {
         margin: 2.5% 0 0 0;
     }

@@ -1,14 +1,16 @@
 ﻿                     smooth scrolling - po najechaniu na menu
 2. media queries
-3. animacje 30days
+                     animacje 30days
                      menu hamburger
 4. srawdzic jak w innych przegladarkach
 sprawdzic walidatorem html i css czystosć kodu
-5. wendor prefiksy dl IE dla css grid
+5. wendor prefiksy dl IE dla css grid   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 6. skrypty async? i po wczytaniu drzewa DOM? scalić i zminimalizowac?
                      dołożyć do górnego menu numer telefonu
 8. pamiętac ze na cloudinary.com mam zdjecia w chmurze
 9. pamietać o programie tinypng do zmniejszania zdjecia
+
+
 10.w sekcji head dodac odpowiednie słowa kluczowe, tytuł itp
                      dodać ikonke łapy przy nazwie dokumentu w przegladarce
 12.wypuscic na github   -   http://rogerdudler.github.io/git-guide/index.pl.html

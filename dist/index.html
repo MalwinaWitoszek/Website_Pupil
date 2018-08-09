@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,96 +9,137 @@
     <link rel="shortcut icon" href="img/iconPaw.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header id="header">
         <div class="container">
-            <a id="logo" href="index.html"><img src="img/logo.png"  alt="logo Pupil salon pielęgnacji"></a>
+            <a id="logo" href="index.html">
+                <img src="img/logo.png" alt="logo Pupil salon pielęgnacji">
+            </a>
+            <div class="contact-phone">
+                <img src="img/contact-phone.png" alt="ikona telefon">
+                <span>733 198 552</span>
+            </div>
             <nav id="top-nav">
                 <ul>
-                    <li><a href="#presentation-area">o nas</a></li>
-                    <li><a href="#offer-area">oferta</a></li>
-                    <li><a href="#price-list-area">cennik</a></li>
-                    <li><a href="#gallery-area">galeria</a></li>
-                    <li><a href="#contact-area">kontakt</a></li>
+                    <li class="close-hamburger-menu">&#x226B;</li>
+                    <li>
+                        <a href="#presentation-area">o nas</a>
+                    </li>
+                    <li>
+                        <a href="#offer-area">oferta</a>
+                    </li>
+                    <li>
+                        <a href="#price-list-area">cennik</a>
+                    </li>
+                    <li>
+                        <a href="#gallery-area">galeria</a>
+                    </li>
+                    <li>
+                        <a href="#contact-area">kontakt</a>
+                    </li>
                 </ul>
+                <span class="hamburger-menu">&#x2261;</span>
+                <div class="mobile-overlay"></div>
             </nav>
+            <a id="back-to-top">&#x21E1;</a>
         </div>
     </header>
 
     <main>
-         <!-- main banner as a slideshow -->
+        <!-- main banner as a slideshow -->
         <section id="presentation-slideshow" class="section">
             <div>
                 <ul id="slides">
-                        <li class = "slide showing">
-                            <div>
-                                <img src="img/slideshow1.jpg">
-                                <div class="slide-description"  >
-                                    <img id="paw-img" src="img/lapa.png" alt="" width="30px">
-                                    <h1><span style="text-orientation:upright">Pupil</span><span class="slide-in-down">Salon Pielęgnacji Psów&nbspi&nbspkotów</span></h1>
+                    <li class="slide showing">
+                        <div>
+                            <img src="img/slideshow1.jpg">
+                            <div class="slide-description">
+                                <img id="paw-img" src="img/lapa.png" alt="ikonka psiej łapy" width=30px>
+                                <h1>
+                                    <span style="text-orientation:upright">Pupil</span>
+                                    <span class="slide-in-down">Salon Pielęgnacji Psów&nbsp;i&nbsp;kotów</span>
+                                </h1>
                             </div>
-                        </li>
-                        <li class = "slide">
-                            <div>
-                                <img src="img/slideshow2.jpg">
-                                <div class="slide-description">
-                                        <h2 class="slide-in-left">Strzyżenie</h2>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div>
+                            <img src="img/slideshow2.jpg">
+                            <div class="slide-description">
+                                <h2 class="slide-in-left">Strzyżenie</h2>
                             </div>
-                        </li>
-                        <li class = "slide">
-                            <div>
-                                <img src="img/slideshow3.jpg">
-                                <div class="slide-description">
-                                        <h2 class="slide-in-left">Trymowanie</h2>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div>
+                            <img src="img/slideshow3.jpg">
+                            <div class="slide-description">
+                                <h2 class="slide-in-left">Trymowanie</h2>
                             </div>
-                        </li>
-                        <li class = "slide">
-                            <div>
-                                <img src="img/slideshow4.jpg">
-                                <div class="slide-description">
-                                        <h2 class="slide-in-left">Kąpiel</h2>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div>
+                            <img src="img/slideshow4.jpg">
+                            <div class="slide-description">
+                                <h2 class="slide-in-left">Kąpiel</h2>
                             </div>
-                        </li>
-                        <li class = "slide">
-                            <div>
-                                <img src="img/slideshow5.jpg">
-                                <div class="slide-description">
-                                        <h2 class="slide-in-left">Pielęgnacja</h2>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div>
+                            <img src="img/slideshow5.jpg">
+                            <div class="slide-description">
+                                <h2 class="slide-in-left">Pielęgnacja</h2>
                             </div>
-                        </li>
-                        <li class = "slide">
-                            <div>
-                                <img src="img/slideshow6.jpg">
-                                <div class="slide-description">
-                                        <h2 class="slide-in-left">Wyczesywanie</h2>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div>
+                            <img src="img/slideshow6.jpg">
+                            <div class="slide-description">
+                                <h2 class="slide-in-left">Wyczesywanie</h2>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <!-- section about firm and owner -->
         <section id="presentation-area" class="section">
-            <div class="container" >
+            <div class="container">
                 <div class="presentation-salon">
                     <h2>Salon groomerski</h2>
                     <img src="img/logo.png" alt="logo Pupil salon pielęgnacji">
 
                     <h3>Pielęgnacja zwierząt</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe autem ipsa labore sed veritatis qui, laudantium, nostrum impedit voluptates debitis, minima sit quae tempora est quod. Repellat ratione consectetur soluta aut eligendi recusandae! Est doloremque enim nesciunt cumque labore culpa minus nihil perspiciatis veritatis quibusdam dolor voluptates deleniti, fuga at ullam ipsa. Doloribus distinctio voluptate corporis consectetur rerum cum explicabo laborum consequatur ad illum nemo ducimus, aspernatur nostrum sunt id libero provident reiciendis dolore. Sit optio temporibus culpa, numquam sequi quam repellat consequatur mollitia quia consequuntur fugit aperiam maxime cum ut voluptatem eos quisquam officiis rem. Iusto at ea esse odit commodi quod officiis nisi saepe, ipsa pariatur ratione maiores quasi, harum quos earum, deserunt culpa veritatis ullam doloribus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe autem ipsa labore sed veritatis qui, laudantium, nostrum
+                        impedit voluptates debitis, minima sit quae tempora est quod. Repellat ratione consectetur soluta
+                        aut eligendi recusandae! Est doloremque enim nesciunt cumque labore culpa minus nihil perspiciatis
+                        veritatis quibusdam dolor voluptates deleniti, fuga at ullam ipsa. Doloribus distinctio voluptate
+                        corporis consectetur rerum cum explicabo laborum consequatur ad illum nemo ducimus, aspernatur nostrum
+                        sunt id libero provident reiciendis dolore. Sit optio temporibus culpa, numquam sequi quam repellat
+                        consequatur mollitia quia consequuntur fugit aperiam maxime cum ut voluptatem eos quisquam officiis
+                        rem. Iusto at ea esse odit commodi quod officiis nisi saepe, ipsa pariatur ratione maiores quasi,
+                        harum quos earum, deserunt culpa veritatis ullam doloribus.
                     </p>
-                </div >
+                </div>
                 <div class="presentation-owner">
                     <h3>Dlaczego zostałam fryzjerem dla psów</h3>
-                    <img src="img/presentation-owner.jpg" alt"salon Pupil właściciel">
+                    <img src="img/presentation-owner.jpg" alt="salon Pupil właściciel">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe autem ipsa labore sed veritatis qui, laudantium, nostrum impedit voluptates debitis, minima sit quae tempora est quod. Repellat ratione consectetur soluta aut eligendi recusandae! Est doloremque enim nesciunt cumque labore culpa minus nihil perspiciatis veritatis quibusdam dolor voluptates deleniti, fuga at ullam ipsa. Doloribus distinctio voluptate corporis consectetur rerum cum explicabo laborum consequatur ad illum nemo ducimus, aspernatur nostrum sunt id libero provident reiciendis dolore. Sit optio temporibus culpa, numquam sequi quam repellat consequatur mollitia quia consequuntur fugit aperiam maxime cum ut voluptatem eos quisquam officiis rem. Iusto at ea esse odit commodi quod officiis nisi saepe, ipsa pariatur ratione maiores quasi, harum quos earum, deserunt culpa veritatis ullam doloribus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe autem ipsa labore sed veritatis qui, laudantium, nostrum
+                        impedit voluptates debitis, minima sit quae tempora est quod. Repellat ratione consectetur soluta
+                        aut eligendi recusandae! Est doloremque enim nesciunt cumque labore culpa minus nihil perspiciatis
+                        veritatis quibusdam dolor voluptates deleniti, fuga at ullam ipsa. Doloribus distinctio voluptate
+                        corporis consectetur rerum cum explicabo laborum consequatur ad illum nemo ducimus, aspernatur nostrum
+                        sunt id libero provident reiciendis dolore. Sit optio temporibus culpa, numquam sequi quam repellat
+                        consequatur mollitia quia consequuntur fugit aperiam maxime cum ut voluptatem eos quisquam officiis
+                        rem. Iusto at ea esse odit commodi quod officiis nisi saepe, ipsa pariatur ratione maiores quasi,
+                        harum quos earum, deserunt culpa veritatis ullam doloribus.
                     </p>
                     <img src="img/animal-friendly.png" alt="symbol przyjazny zwierzętom">
 
@@ -109,61 +151,62 @@
 
         </div>
 
-         <!-- section about services offered -->
+        <!-- section about services offered -->
         <section id="offer-area" class="section">
             <h2 class="container">Psi fryzjer oferuje:</h2>
             <div class="offer-container">
-                <div class="offer-box">
-                    <img class="offer-picture" src="img/offer-image1.jpg" alt="">
+                <div class="offer-box slide-in slide-in-from-left">
+                    <img class="offer-picture slide-in-from-left" src="img/offer-image1.jpg" alt="obrazek pieska">
                     <div class="offer-description">
                         <h3>Strzyżenie</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur dolor sit amet, consectetur </p>
 
                     </div>
                 </div>
-                <div class="offer-box">
-                    <img class="offer-picture" src="img/offer-image2.jpg" alt="">
+                <div class="offer-box slide-in slide-in-from-right">
+                    <img class="offer-picture" src="img/offer-image2.jpg" alt="obrazek pieska">
                     <div class="offer-description">
                         <h3>Trymowanie</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur dolor sit amet, consectetur </p>
                     </div>
                 </div>
-                <div class="offer-box">
-                    <img class="offer-picture" src="img/offer-image3.jpg" alt="">
+                <div class="offer-box slide-in slide-in-from-right">
+                    <img class="offer-picture" src="img/offer-image3.jpg" alt="obrazek pieska">
                     <div class="offer-description">
                         <h3>Kąpiel</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur dolor sit amet, consectetur </p>
                     </div>
                 </div>
-                <div class="offer-box">
-                    <img class="offer-picture" src="img/offer-image4.jpg" alt="">
+                <div class="offer-box slide-in slide-in-from-right">
+                    <img class="offer-picture" src="img/offer-image4.jpg" alt="obrazek pieska">
                     <div class="offer-description">
                         <h3>Wyczesanie</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur dolor sit amet, consectetur </p>
                     </div>
                 </div>
-                <div class="offer-box">
-                    <img class="offer-picture" src="img/offer-image5.jpg" alt="">
+                <div class="offer-box slide-in slide-in-from-left">
+                    <img class="offer-picture" src="img/offer-image5.jpg" alt="obrazek pieska">
                     <div class="offer-description">
-                        <h3>Czyszczenie<br>oczu i uszu</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur dolor sit  </p>
+                        <h3>Czyszczenie
+                            <br>oczu i uszu</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur dolor sit </p>
                     </div>
                 </div>
-                <div class="offer-box">
-                    <img class="offer-picture" src="img/offer-image6.jpg" alt="">
+                <div class="offer-box slide-in slide-in-from-left">
+                    <img class="offer-picture" src="img/offer-image6.jpg" alt="obrazek pieska">
                     <div class="offer-description">
                         <h3>Obcinanie pazurków</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur dolor sit am </p>
                     </div>
                 </div>
                 <div class="offer-box">
-                    <img class="offer-addition-img1" src="img/lapa.png" alt="">
+                    <img class="offer-addition-img1" src="img/lapa.png" alt="ikonka psiej łapy">
                 </div>
                 <div class="offer-box">
-                    <img class="offer-addition-img2" src="img/lapy.png" alt="">
+                    <img class="offer-addition-img2" src="img/lapy.png" alt="obrazek psich łap">
                 </div>
                 <div class="offer-box">
-                    <img class="offer-addition-img2" src="img/lapy.png" alt="">
+                    <img class="offer-addition-img2" src="img/lapy.png" alt="obrazek psich łap">
                 </div>
             </div>
         </section>
@@ -172,7 +215,7 @@
 
         </div>
 
-         <!-- list of prices -->
+        <!-- list of prices -->
         <section id="price-list-area" class="section">
             <div class="prices-container">
                 <div class="prices-box">
@@ -259,14 +302,14 @@
                     </table>
                 </div>
                 <div class="prices-box">
-                    <img class="prices-addition-img2" src="img/lapy.png" alt="">
+                    <img class="prices-addition-img2" src="img/lapy.png" alt="obrazek psich łap">
                 </div>
                 <div class="prices-box">
-                    <img class="prices-addition-img2" src="img/lapy.png" alt="">
+                    <img class="prices-addition-img2" src="img/lapy.png" alt="obrazek psich łap">
                 </div>
             </div>
 
-       </section>
+        </section>
 
         <div class="parallax-img3">
 
@@ -276,22 +319,20 @@
         <section id="gallery-area" class="section">
             <h2 class="container">Galeria Pupila</h2>
             <div class="gallery-container">
-                <!-- <div class="images"> -->
-                    <div class="main-img">
-                            <img src="img/galery-photo1.jpg" alt="" id="actual">
-                    </div>
-                    <img src="img/galery-photo1.jpg">
-                    <img src="img/galery-photo2.jpg">
-                    <img src="img/galery-photo3.jpg">
-                    <img src="img/galery-photo4.jpg">
-                    <img src="img/galery-photo5.jpg">
-                    <img src="img/galery-photo6.jpg">
-                    <img src="img/galery-photo7.jpg">
-                    <img src="img/galery-photo8.jpg">
-                    <img src="img/galery-photo9.jpg">
-                    <img src="img/galery-photo10.jpg">
-                    <img src="img/galery-photo11.jpg">
-                <!-- </div> -->
+                <div class="main-img">
+                    <img src="img/galery-photo1.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil" id="actual">
+                </div>
+                <img src="img/galery-photo1.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo2.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo3.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo4.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo5.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo6.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo7.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo8.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo9.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo10.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo11.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
             </div>
         </section>
 
@@ -299,29 +340,44 @@
 
         </div>
 
-          <!--contact details section -->
+        <!--contact details section -->
         <section id="contact-area" class="section">
             <div class="contact-container">
-                <div >
-                    <img src="img/contact-dog.png" alt="">
-                    <img src="img/contact-cat.png" alt="">
+                <div>
+                    <img src="img/contact-dog.png" alt="ikonka głowy psa">
+                    <img src="img/contact-cat.png" alt="ikonka głowy kota">
                     <div>
                         <h2>Zapraszam do mojego salonu</h2>
                         <h3>na profesjonalne strzyżenie Państwa Pupilów!</h3>
                     </div>
                 </div>
                 <div class="contact-icon center">
-                    <img src="img/contact-house.png" alt="">
+                    <img src="img/contact-house.png" alt="ikonka domu">
                 </div>
                 <div class="contact-icon center">
-                    <img src="img/contact-phone.png" alt="">
+                    <img src="img/contact-phone.png" alt="ikonka telefonu">
                 </div>
                 <div class="contact-icon center">
-                    <img src="img/contact-clock.png" alt="">
+                    <img src="img/contact-clock.png" alt="ikona zegara">
                 </div>
-                <div class="contact-data center" ><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo corrupti.</p></div>
-                <div class="contact-data center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo corrupti.</p></div>
-                <div class="contact-data center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo corrupti.</p></div>
+                <div class="contact-data center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo
+                        corrupti.
+                    </p>
+                </div>
+                <div class="contact-data center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo
+                        corrupti.
+                    </p>
+                </div>
+                <div class="contact-data center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo
+                        corrupti.
+                    </p>
+                </div>
                 <div class="contact-google-map">
                     <p>Mapa dojazdu </p>
                     <div class="map-container">
@@ -330,23 +386,20 @@
                     </div>
                 </div>
                 <div class="contact-salon-photo">
-                    <p><strong>Salon fryzjerski dla psów i kotów PUPIL</strong></p>
-                    <img src="img/contact-firm-photo.jpg" alt="">
+                    <p>
+                        <strong>Salon fryzjerski dla psów i kotów PUPIL</strong>
+                    </p>
+                    <img src="img/contact-firm-photo.jpg" alt="zdjęcie wnętrza salonu Pupil">
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-            Copyright &copy; 2018 &nbsp; psisalonpupil.pl. Wszelkie prawa zastrzeżone
-        </footer>
-<script src="js/plugins.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh-Bbr6Wns0vRhEc-fTEfk2nMOAOh0C8E&callback=initMap"></script>
+        Copyright &copy; 2018 &nbsp; psisalonpupil.pl. Wszelkie prawa zastrzeżone
+    </footer>
+    <script src="js/plugins.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh-Bbr6Wns0vRhEc-fTEfk2nMOAOh0C8E&callback=initMap"></script>
 
 </body>
+
 </html>
-
-
-   <!-- https://codepen.io/Manislawa/project/full/ZMWpjp/   -->
-   <!-- https://fe3b3bbd6f1e4170827e2129553a139b.production.codepen.codes/ full page -->
-   <!-- https://codepen.io/Manislawa/project/editor/ZMWpjp -->
-

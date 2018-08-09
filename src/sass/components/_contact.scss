@@ -134,7 +134,7 @@
 
     .contact-icon > img      //contact big icons
     {
-        width: calc($contact-icon-dimension - 10%);
+        width: $contact-icon-dimension - 10%;
         height: $contact-icon-dimension;
 
     }

@@ -4,7 +4,7 @@ h1    //first slide description
     position: relative;
     font-family: $heading-font-family;
     color: $header-text-color;
-    
+
     & span:first-child   //word "pupil"
     {
     position: absolute;
@@ -29,10 +29,6 @@ h1    //first slide description
     }
 }
 
-
-
-
-
 #paw-img
 {
     height: $heading-h1-font-size;
@@ -40,11 +36,7 @@ h1    //first slide description
     position: absolute;
 
 }
-#presentation-slideshow > div  //slideshow container
-{
-    height: 100vh;
-}
-#slides     
+#slides
 {
     position: relative;
     height: 100%;
@@ -69,7 +61,7 @@ h1    //first slide description
     {
         animation-delay: 21s;
     }
-    
+
 }
 .slide     //one slide with description h2
 {
@@ -81,26 +73,30 @@ h1    //first slide description
     transition: opacity 3s;
     height: 100%;
     width: 100%;
-    
+
     & > div
     {
         position: relative;
         height: 100%;
     }
 
-    img:not(#paw-img)
+    picture
     {
-        height: 100%;
+        height: auto;
         width: 100%;
         position: absolute;
-        top: 0;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
     }
-}    
+}
 .slide-description
 {
     position: absolute;
-    bottom: 20%;
-    left: 8%;
+    top: 79vh;
+    left: 10vw;
     h2
     {
         padding: 15px;
@@ -108,7 +104,22 @@ h1    //first slide description
         @include opacity(.4, $general-background-color,30px)
     }
 }
-    
+.slide-hidden {
+    // when elements have an absolute position, it's a way for the ancestor (#presentation-slideshow)
+    // to match its height to their height
+    picture{
+        position: relative;
+        visibility: hidden;
+        width: 100%;
+
+        img{
+            width: 100%;
+            height: auto;
+            margin-top: -8px;
+        }
+    }
+
+}
 
 .showing{
     z-index: 10;
@@ -117,7 +128,7 @@ h1    //first slide description
 
 //ANIMATIONS
   //first slide description slide in down animation
-@keyframes slide-in-down { 
+@keyframes slide-in-down {
 from {
     transform: translate3d(0, -50%, 0);
     opacity: 0;
@@ -128,7 +139,7 @@ to {
     opacity: 1;
 }
 }
-.slide-in-down 
+.slide-in-down
 {
      animation: slide-in-down 1s linear 1s 1 both;
 }
@@ -146,7 +157,7 @@ to {
 }
 .slide-in-left
 {
- 
+
     animation: slide-in-left 1s linear 1 both;
 
 }
