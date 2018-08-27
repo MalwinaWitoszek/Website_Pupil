@@ -3,7 +3,7 @@ $general-font-size: 16px;
 $general-font-family: 'Lato', cursive;  // 400, 700
 $general-font-weight: 400;
 $general-font-weight-bold: 700;
-$general-line-height: 1.8em;
+$general-line-height: 1.375em;
 $general-text-align: justify;
 $heading-font-family: 'Lemonada', cursive;
 $heading-h1-font-family: 'Lemon', cursive;
@@ -43,8 +43,8 @@ $gallery-grid-gap : 25px;
 $gallery-container-width: 75%;
 $gallery-max-width: 1200px;
 $offer-box-min-height : 100px;
-$offer-grid-gap : 30px;
-$contact-icon-dimension: 30%;
+$offer-grid-gap : 2em;
+$contact-icon-dimension: 25%;
 $mobile-menu-width: 65vw;
 
 
@@ -53,13 +53,13 @@ $header-contact-phone-bottom-margin: 12px;
 $section-h2-top-margin: 70px;
 $section-h2-bottom-margin: 50px;
 $contact-top-banner-padding: 40px;
-$presentation-paragrapf-margin: 40px;
-$animate-delay-slideshow: 4s;
+$presentation-paragrapf-margin: 7%;
 $mobile-padding: 6vw;
+$animate-delay-slideshow: 4s;
 
 // MEDIA RULES BREAKPOINTS (minimum-width):
 
-$media-desktopXL: 1900px; //the highest resolution desktops
+$media-desktopXL: 1600px; //the highest resolution desktops
 $media-desktop: 1281px;  //big desktops
 $media-laptop: 1025px;  //laptops & little desktops
 $media-tablet: 825px;  // tablets & Ipads

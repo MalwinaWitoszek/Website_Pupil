@@ -1,44 +1,56 @@
-.presentation-salon
-{
-    padding-bottom: 1.8*$general-line-height;
-    img:first-of-type
-    {
-        margin: 2% 4% .7% 2%;
-        width: 40%;
-        float: left;
-    }
+.presentation-salon {
+  padding-bottom: 1.8 * $general-line-height;
 
-    h2
-    {
-        line-height: $general-line-height;
-        padding-bottom: .8*$general-line-height;
-    }
+  h2 {
+    line-height: $general-line-height;
+    padding-bottom: 0.8 * $general-line-height;
+  }
 
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > img {
+      margin: 2% 7%;
+      width: 37%;
+      @include breakpoints(desktopXL) {
+        margin: 2% 10%;
+        width: 32%;
+      }
+    }
+    & > div {
+      align-self: flex-start;
+      padding-right: 1.8 * $general-line-height;
+    }
+  }
 }
-.presentation-owner
-{
-    padding: 0 10%;
-    margin: 0 auto;
+.presentation-owner {
+  padding: 0 19%;
+  margin: 0 auto;
+  @include breakpoints(desktopXL) {
+    padding: 0 19%;
+  }
 
-    img:first-of-type
-    {
-        margin-left: $presentation-paragrapf-margin;
-        margin-top: $general-font-size / 2;
-        width: 30%;
-        max-width: 220px;
-        float: right;
-        border: 3px solid $general-color;
-    }
-    img:last-of-type
-    {   
-        margin: 2% 40% 0 40%;
-        width: 15%;
-    }
+  h3 {
+    padding-bottom: 1 * $general-line-height;
+  }
+  img:first-of-type {
+    margin-left: $presentation-paragrapf-margin;
+    margin-bottom: .5*$presentation-paragrapf-margin;
+    margin-top: $general-font-size / 2;
+    width: 25%;
+    max-width: 140px;
+    float: right;
+    border: 3px solid $general-color;
+  }
+  img:last-of-type {
+    margin: 5% 40% 0 40%;
+    width: 12%;
+  }
 }
-#presentation-area
-{
-    h3
-    {
-        padding-bottom: .6*$general-line-height;
-    }
+#presentation-area {
+  p {
+    hyphens: auto;
+  }
 }

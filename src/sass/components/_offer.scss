@@ -6,6 +6,11 @@
   // max-width: $galery-max-width;
   grid-gap: $offer-grid-gap;
   background-color: $offer-background-color;
+  @include breakpoints(desktopXL) {
+    grid-gap: 1 * $offer-grid-gap;
+    grid-template-rows: repeat(10, 60px);
+
+  }
 }
 
 .offer-box {
@@ -58,10 +63,18 @@
   .offer-description {
     height: 100%;
     width: 50%;
+    overflow: hidden;
+  }
+  h3 {
+    padding-left: $general-font-size;
+    padding-right: $general-font-size;
   }
   .offer-picture {
     height: 100%;
     width: 55%;
+    @include breakpoints(desktopXL) {
+      width: auto;
+    }
   }
   .offer-addition-img1 {
     height: 40%;
@@ -69,30 +82,32 @@
     @include both-center;
   }
   .offer-addition-img2 {
-    height: 80%;
+    height: auto;
     width: 90%;
     margin: auto;
     opacity: 0.2;
   }
   p {
     padding: 0 15%;
+    hyphens: auto;
+    word-wrap: break-word;
+    text-align: center;
   }
-  &:hover{
-transform: scale(.98);
+  &:hover {
+    transform: scale(0.98);
   }
 }
-.slide-in{
-      opacity: 0;
+.slide-in {
+  opacity: 0;
   transition: all 2s;
-
 }
 .slide-in-from-left {
-    transform: translateX(-10%) scale(0.8)
+  transform: translateX(-10%) scale(0.8);
 }
 .slide-in-from-right {
-    transform: translateX(10%) scale(0.8)
+  transform: translateX(10%) scale(0.8);
 }
-.active{
-    opacity: 1;
-    transform: translateX(0%) scale(1);
+.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
 }

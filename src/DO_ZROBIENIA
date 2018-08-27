@@ -18,3 +18,4 @@ sprawdzic walidatorem html i css czystosć kodu
 14.sprawdzic w debugerze-network jak siec sie ta strona wczytuje
                      zrobic strzałke powrotu do gory na dole strony
 16.dołożyć modernizr - html5shiv (aby w roznych przegladarkach obslugowal html5)
+                     responsywme zdjecia pokazu slajdw

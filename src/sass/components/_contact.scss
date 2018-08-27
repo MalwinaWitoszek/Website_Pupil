@@ -1,161 +1,135 @@
-.contact-container
-{
-    @extend .container;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    border: white solid 10px;
-    min-height: calc(100vh - 10px);
-    background-color: $gallery-background-color;
+.contact-container {
+  @extend .container;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  border: white solid 10px;
+  min-height: calc(100vh - 10px);
+  background-color: $gallery-background-color;
+  position: relative;
+
+  & > :first-child       ///top banner
+ {
+    grid-column: 1 / span 9;
+    grid-row: 1 / span 2;
+    width: 100%;
+    // background-color: $general-color;
+    background-image: linear-gradient(
+      $gallery-background-color,
+      $general-color 87%,
+      $gallery-background-color
+    );
+    @include v-center;
+    padding: $contact-top-banner-padding 0;
+    & > :first-child  //dog img
+ {
+      float: left;
+      margin: 3px 5% 0 5%;
+      width: 12%;
+      height: 50%;
+    }
+    & > :nth-child(2)    //cat img
+ {
+      float: right;
+      margin: 0 5%;
+      width: 10%;
+      height: 30%;
+    }
+    & > :last-child  //div with headings
+ {
+      @include both-center($left: -100%);
+    }
+  }
+  & > :nth-child(2)        //house icon
+ {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 2;
     position: relative;
-
-    & > :first-child       ///top banner
-    {
-        grid-column: 1 / span 9;
-        grid-row: 1 / span 2;
-        // background-color: $general-color;
-        background-image: linear-gradient($gallery-background-color, $general-color 87%, $gallery-background-color);
-        @include v-center;
-        padding: $contact-top-banner-padding 0;
-
-        & > :first-child  //dog img
-        {
-            float: left;
-            margin: 3px 5% 0 5%;
-            width: 12%;
-            height: 50%;
-
-        }
-        & > :nth-child(2)    //cat img
-        {
-            float: right;
-            margin: 0 5%;
-            width: 10%;
-            height: 30%;
-        }
+  }
+  & > :nth-child(3)             //phone icon
+ {
+    grid-column: 4 / span 3;
+    grid-row: 3 / span 2;
+    position: relative;
+  }
+  & > :nth-child(2), & > :nth-child(3)   //separating icons
+ {
+    &::before    //separating line icons
+ {
+      content: "";
+      border-right: 6px solid $general-color;
+      @include v-center; // centering vertically
+      right: -2px;
+      height: $contact-icon-dimension;
+      z-index: 2;
     }
-
-    & > :nth-child(2)        //house icon
-    {
-        grid-column: 1 / span 3;
-        grid-row: 3 / span 2;
-
-        position: relative;
+  }
+  & > :nth-child(4)                 //clock icon
+ {
+    grid-column: 7 / span 3;
+    grid-row: 3 / span 2;
+  }
+  & > :nth-child(5)         // address
+ {
+    grid-column: 1 / span 3;
+    grid-row: 5 / span 2;
+  }
+  & > :nth-child(6)           // telephone number
+ {
+    grid-column: 4 / span 3;
+    grid-row: 5 / span 2;
+  }
+  & > :nth-child(7)           //opening hours
+ {
+    grid-column: 7 / span 3;
+    grid-row: 5 / span 2;
+  }
+  & > :nth-child(8)           //map
+ {
+    grid-column: 1 / span 5;
+    grid-row: 7 / span 3;
+    padding-right: 15px;
+  }
+  & > :nth-child(9)           //photo of the salon
+ {
+    grid-column: 6 / span 4;
+    grid-row: 7 / span 3;
+    padding-left: 15px;
+    img {
+      width: 90%;
+      height: calc(100% - 50px);
+      border: 2px solid $general-color;
     }
-
-    & > :nth-child(3)             //phone icon
-    {
-        grid-column: 4 / span 3;
-        grid-row: 3 / span 2;
-
-        position: relative;
+  }
+  & > :nth-child(8),
+  & > :nth-child(9) {
+    @include center-one-element(img);
+    p {
+      padding-top: 20px;
+      padding-left: 35px;
     }
+  }
+  .center {
+    @include center-children();
+  }
 
-    & > :nth-child(2), & > :nth-child(3)   //separating icons
+  .contact-icon > img      //contact big icons
+ {
+    width: $contact-icon-dimension - 10%;
+    height: $contact-icon-dimension;
+    transition: all 0.2s ease-in-out;
+    &:hover //hover effect on icons
     {
-        &::before    //separating line icons
-        {
-            content: '';
-            border-right: 6px solid $general-color;
-            @include v-center; //centering vertically
-            right: -2px;
-            height: $contact-icon-dimension;
-            z-index: 2;
-        }
+      transform: scale(1.1);
     }
-
-    & > :nth-child(4)                 //clock icon
-    {
-        grid-column: 7 / span 3;
-        grid-row: 3 / span 2;
-
+    @include breakpoints(desktopXL) {
+      width: $contact-icon-dimension - 15%;
+      height: $contact-icon-dimension - 5%;
     }
-    & > :nth-child(5)         // address
-    {
-        grid-column: 1 / span 3;
-        grid-row: 5 / span 2;
-
-
-    }
-    & > :nth-child(6)           // telephone number
-    {
-        grid-column: 4 / span 3;
-        grid-row: 5 / span 2;
-
-
-    }
-    & > :nth-child(7)           //opening hours
-    {
-        grid-column: 7 / span 3;
-        grid-row: 5 / span 2;
-
-
-    }
-    & > :nth-child(8)           //map
-    {
-        grid-column: 1 / span 5;
-        grid-row: 7 / span 3;
-
-        padding-right: 15px;
-
-    }
-
-    & > :nth-child(9)           //photo of the salon
-    {
-        grid-column: 6 / span 4;
-        grid-row: 7 / span 3;
-
-        padding-left: 15px;
-        img
-        {
-            width: 90%;
-            height: calc(100% - 50px);
-            border: 2px solid $general-color;
-
-        }
-    }
-
-    & > :nth-child(8), & > :nth-child(9)
-    {
-        @include center-one-element(img);
-        p
-        {
-           padding-top: 20px;
-           padding-left: 35px;
-
-        }
-
-    }
-
-    .center
-    {
-        @include center-children()
-    }
-
-    .contact-icon > img      //contact big icons
-    {
-        width: $contact-icon-dimension - 10%;
-        height: $contact-icon-dimension;
-
-    }
-    .contact-data > p   //contact informations
-    {
-        margin: 0 14% auto 14%;
-        text-align: justify;
-    }
-
-    .contact-icon > img   //hover effect on icons
-    {
-        transition: all .2s ease-in-out;
-
-                    &:hover
-                    {
-                        transform: scale(1.1);
-                    }
-    }
-
+  }
+  .contact-data > p   //contact informations
+ {
+    margin: 0 14% auto 14%;
+    text-align: justify;
+  }
 }
-
-
-
-

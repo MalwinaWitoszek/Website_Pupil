@@ -34,20 +34,18 @@ header .container {
 .contact-phone{
     flex-grow: 2;
     align-self: center;
-    display: flex;
-    flex-wrap: nowrap;
     height: $header-contact-phone-base-height;
     width: auto;
     font-family: $general-font-family;
     font-weight: $general-font-weight;
-    font-size: .9*$nav-change-font-size;
+    font-size: 1.1*$nav-change-font-size;
     font-style: italic;
-    margin-left: 1.5*$nav-change-font-size;
+    margin-left: 1.6*$nav-change-font-size;
     @include breakpoints (laptop) {
         display: none;
     }
     @include breakpoints (tablet) {
-        display: flex;
+        display: block;
     }
     @include breakpoints (mobile-landscape) {
         display: none;
@@ -56,8 +54,39 @@ header .container {
         height: 100%;
         width: auto;
         margin-right: .7*$nav-change-font-size;
+        &:hover {
+          animation: shakePhone 0.82s cubic-bezier(.36,.07,.19,.97) both;
+          transform: translate3d(0, 0, 0);
+          // backface-visibility: hidden;
+          // perspective: 1000px;
+        }
       }
 }
+.pulsation {
+  animation: pulsation 2s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0.4;
+  height: 100%;
+  width: auto;
+}
+@keyframes pulsation {
+  0% {
+      opacity: .1;
+  }
+  50% {
+      opacity: 1;
+      height: 100%;
+      width: auto;
+  }
+  100% {
+      opacity: .1;
+      height: 180%;
+      width: auto;
+  }
+}
+
+
+
 #top-nav {
   height: 100%;
   display: flex;
@@ -217,4 +246,20 @@ header .container {
     }
 
 }
+@keyframes shakePhone {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
 
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}
