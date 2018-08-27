@@ -69,21 +69,7 @@ header .container {
   height: 100%;
   width: auto;
 }
-@keyframes pulsation {
-  0% {
-      opacity: .1;
-  }
-  50% {
-      opacity: 1;
-      height: 100%;
-      width: auto;
-  }
-  100% {
-      opacity: .1;
-      height: 180%;
-      width: auto;
-  }
-}
+
 
 
 
@@ -261,5 +247,20 @@ header .container {
 
   40%, 60% {
     transform: translate3d(1px, 0, 0);
+  }
+}
+@keyframes pulsation {
+  0% {
+      opacity: .1;
+  }
+  50% {
+      opacity: 1;
+      height: 100%;
+      width: auto;
+  }
+  100% {
+      opacity: .1;
+      height: 180%;
+      width: auto;
   }
 }

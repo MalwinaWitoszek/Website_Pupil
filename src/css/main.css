@@ -1220,38 +1220,6 @@ header .container, header .offer-container, header .prices-container, header .co
   width: auto;
 }
 
-@-webkit-keyframes pulsation {
-  0% {
-    opacity: .1;
-  }
-  50% {
-    opacity: 1;
-    height: 100%;
-    width: auto;
-  }
-  100% {
-    opacity: .1;
-    height: 180%;
-    width: auto;
-  }
-}
-
-@keyframes pulsation {
-  0% {
-    opacity: .1;
-  }
-  50% {
-    opacity: 1;
-    height: 100%;
-    width: auto;
-  }
-  100% {
-    opacity: .1;
-    height: 180%;
-    width: auto;
-  }
-}
-
 #top-nav {
   height: 100%;
   display: -webkit-box;
@@ -1480,6 +1448,38 @@ header .container, header .offer-container, header .prices-container, header .co
   40%, 60% {
     -webkit-transform: translate3d(1px, 0, 0);
             transform: translate3d(1px, 0, 0);
+  }
+}
+
+@-webkit-keyframes pulsation {
+  0% {
+    opacity: .1;
+  }
+  50% {
+    opacity: 1;
+    height: 100%;
+    width: auto;
+  }
+  100% {
+    opacity: .1;
+    height: 180%;
+    width: auto;
+  }
+}
+
+@keyframes pulsation {
+  0% {
+    opacity: .1;
+  }
+  50% {
+    opacity: 1;
+    height: 100%;
+    width: auto;
+  }
+  100% {
+    opacity: .1;
+    height: 180%;
+    width: auto;
   }
 }
 
