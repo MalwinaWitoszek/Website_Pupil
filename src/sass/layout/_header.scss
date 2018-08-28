@@ -41,15 +41,7 @@ header .container {
     font-size: 1.1*$nav-change-font-size;
     font-style: italic;
     margin-left: 1.6*$nav-change-font-size;
-    @include breakpoints (laptop) {
-        display: none;
-    }
-    @include breakpoints (tablet) {
-        display: block;
-    }
-    @include breakpoints (mobile-landscape) {
-        display: none;
-    }
+
     & img {
         height: 100%;
         width: auto;
@@ -60,7 +52,20 @@ header .container {
           // backface-visibility: hidden;
           // perspective: 1000px;
         }
-      }
+    }
+    @include breakpoints(desktopXL) {
+        font-size: 1.2*$nav-change-font-size;
+    }
+    @include breakpoints(laptop) {
+        display: none;
+    }
+    @include breakpoints(tablet) {
+        display: block;
+        font-size: .7*$nav-change-font-size;
+    }
+    @include breakpoints (mobile-landscape) {
+        display: none;
+    }
 }
 .pulsation {
   animation: pulsation 2s ease-out;
@@ -115,16 +120,22 @@ header .container {
     line-height: $header-base-height;
     text-transform: uppercase;
     transition: all 0.5s;
-    @include breakpoints(tablet) {
-      display: block;
-    //   height: 2.5 * $nav-font-size;
-      padding: 20px $mobile-padding 0;
-      line-height: 1;
-      width: auto;
-    }
     &:first-child(){
         height: $header-base-height;
         padding-top: 30px;
+    }
+    @include breakpoints(desktopXL) {
+      font-size: 1.4*$nav-font-size;
+    }
+    @include breakpoints(laptop) {
+        font-size: .9*$nav-font-size;
+    }
+    @include breakpoints(tablet) {
+      display: block;
+      padding: 20px $mobile-padding 0;
+      line-height: 1;
+      width: auto;
+      font-size: .8*$nav-font-size;
     }
   }
 
@@ -204,7 +215,16 @@ header .container {
 
 .scroll-header-li {
   font-size: $nav-change-font-size !important;
-  color: grey;
+  color: pink;
+  @include breakpoints(desktopXL) {
+    font-size: 1.2*$nav-change-font-size !important;
+  }
+  @include breakpoints(laptop) {
+      font-size: .9*$nav-change-font-size !important;
+  }
+  @include breakpoints(tablet) {
+    font-size: .8*$nav-change-font-size !important;
+  }
 }
 // back to top button
 #back-to-top{

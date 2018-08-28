@@ -8,12 +8,11 @@
 
     h3
     {
-        font-size: $heading-h3-font-size;
         position: relative;
         text-align: center;
     }
-}  
- 
+}
+
 .prices-box
 {
 
@@ -26,7 +25,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        
+
     }
 
     &:nth-child(2)     //strzyżenie
@@ -47,7 +46,7 @@
     &:nth-child(3)    //Trymowanie
     {
         grid-column: 5 / span 2;
-        grid-row: 1 / span 2;  
+        grid-row: 1 / span 2;
         background: $general-background-color; //for browsers that do not support gradients
         background: linear-gradient(to right, $general-color 30%, $general-background-color 90%);
         h3
@@ -62,7 +61,7 @@
     &:nth-child(4)   //Kąpiel
     {
         grid-column: 1 / span 2;
-        grid-row: 3;  
+        grid-row: 3;
         background: $general-background-color; //for browsers that do not support gradients
         background: linear-gradient(to left, $general-color 30%, $general-background-color 90%);
         h3
@@ -94,21 +93,21 @@
     {
         grid-column: 1;
         grid-row: 2;
-        
+
         opacity: .2;
     }
     &:nth-child(7)
     {
         grid-column: 6;
         grid-row: 3;
-    
+
         opacity: .2;
     }
     img
     {
         height: 100%;
         width: 67%;
-      
+
     }
     table
     {
@@ -127,7 +126,7 @@
             text-align: right;
             padding-right: 20%;
         }
-       
+
     }
 }
 

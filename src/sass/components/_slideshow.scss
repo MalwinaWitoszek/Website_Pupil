@@ -7,25 +7,46 @@ h1    //first slide description
 
     & span:first-child   //word "pupil"
     {
-    position: absolute;
-    bottom: (.2*$general-font-size);
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    font-size: $heading-h1-font-size;
-    letter-spacing: 1.5*$general-font-size;
-    font-family: $heading-h1-font-family;
-    text-transform: uppercase;
-    padding-left: 10px;
-
+        position: absolute;
+        bottom: (.2*$general-font-size);
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        font-size: $heading-h1-font-size;
+        letter-spacing: 1.5*$general-font-size;
+        font-family: $heading-h1-font-family;
+        text-transform: uppercase;
+        // padding-left: 10px;
+        @include breakpoints(desktopXL) {
+            font-size: 1.5*$heading-h1-font-size;
+        }
+        @include breakpoints(laptop) {
+            font-size: .7*$heading-h1-font-size;
+        }
+        @include breakpoints(tablet) {
+            font-size: .6*$heading-h1-font-size;
+        }
     }
     & span:last-child   //words: "salon pielęgnacji psów i kotów"
     {
-    position: absolute;
-    bottom: -(3*$general-font-size);
-    left: 2*$heading-h1-font-size;
-    letter-spacing: ($general-font-size / 4);
-    line-height: .9*$heading-h1-line-height;
-    font-weight: $general-font-weight-bold;
+        position: absolute;
+        bottom: -(3*$general-font-size);
+        left: 3*$heading-h1-font-size;
+        letter-spacing: ($general-font-size / 4);
+        line-height: .9*$heading-h1-line-height;
+        font-weight: $general-font-weight-bold;
+        @include breakpoints(desktopXL) {
+            font-size: .8*$heading-h1-font-size;
+        }
+        @include breakpoints(laptop) {
+        font-size: .5*$heading-h1-font-size;
+        left: 2*$heading-h1-font-size;
+        bottom: -(2*$general-font-size);
+        }
+        @include breakpoints(tablet) {
+            font-size: .4*$heading-h1-font-size;
+            left: 2*$heading-h1-font-size;
+            bottom: -(2*$general-font-size);
+        }
     }
 }
 
@@ -34,7 +55,15 @@ h1    //first slide description
     height: $heading-h1-font-size;
     width: auto;
     position: absolute;
-
+    @include breakpoints(desktopXL) {
+        height: 1.5*$heading-h1-font-size;
+    }
+    @include breakpoints(laptop) {
+        height: .7*$heading-h1-font-size;
+    }
+    @include breakpoints(tablet) {
+        height: .5*$heading-h1-font-size;
+        }
 }
 #slides
 {
@@ -95,14 +124,22 @@ h1    //first slide description
 .slide-description
 {
     position: absolute;
-    top: 82vh;
+    bottom: 22%;
     left: 10vw;
     h2
     {
         padding: 15px;
         color: $header-text-color;
-        @include opacity(.4, $general-background-color,30px)
+        @include opacity(.4, $general-background-color,30px);
+        @include breakpoints(desktopXL) {
+            padding: 35px;
+        }
+        @include breakpoints(desktop) {
+            bottom: 12%;
+        }
     }
+
+
 }
 .slide-hidden {
     // when elements have an absolute position, it's a way for the ancestor (#presentation-slideshow)
