@@ -15,9 +15,12 @@ header {
   }
 }
 header .container {
-  display: flex; // !!!!!!!1
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  @include breakpoints(laptop) {
+    width: $general-container-width;
+  }
 }
 #logo {
   //   float: left;
@@ -61,7 +64,7 @@ header .container {
     }
     @include breakpoints(tablet) {
         display: block;
-        font-size: .7*$nav-change-font-size;
+        font-size: .9*$nav-change-font-size;
     }
     @include breakpoints (mobile-landscape) {
         display: none;
@@ -135,7 +138,7 @@ header .container {
       padding: 20px $mobile-padding 0;
       line-height: 1;
       width: auto;
-      font-size: .8*$nav-font-size;
+      font-size: $nav-font-size;
     }
   }
 

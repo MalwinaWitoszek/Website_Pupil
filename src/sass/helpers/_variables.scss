@@ -3,7 +3,7 @@ $general-font-size: 18px;
 $general-font-family: 'Lato', cursive;  // 400, 700
 $general-font-weight: 400;
 $general-font-weight-bold: 700;
-$general-line-height: 1.8em;
+$general-line-height: 1.8*$general-font-size;
 $general-text-align: justify;
 $heading-font-family: 'Lemonada', cursive;
 $heading-h1-font-family: 'Lemon', cursive;
@@ -34,7 +34,7 @@ $back-to-top-button-text-color: darken($general-color, 35);
 
 
 //dimensions
-$general-container-width: 90%;
+$general-container-width: 85%;
 $section-top-bottom-padding: 6%;
 $header-base-height: 11vh;
 $header-change-height: 9.5%;
@@ -45,7 +45,7 @@ $gallery-container-width: 75%;
 $gallery-max-width: 1200px;
 $offer-box-min-height : 100px;
 $offer-grid-gap : 2em;
-$contact-icon-dimension: 25%;
+$contact-icon-dimension: 15%;
 $mobile-menu-width: 65vw;
 
 

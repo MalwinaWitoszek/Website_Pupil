@@ -32,6 +32,16 @@ body
     @include breakpoints (desktopXL) {
         width: $general-container-width - 10%;
     }
+    @include breakpoints(laptop) {
+        width: 100%;
+        padding: 0 5%;
+    }
+    @include breakpoints(tablet) {
+
+    }
+    @include breakpoints(mobile-landscape) {
+    padding: 0 2%;
+    }
 }
 section
 {
@@ -78,10 +88,10 @@ h2
     font-style: $headings-font-style;
     text-shadow: 2px 2px 2px rgba(125, 125, 125, .4);
     @include breakpoints(desktopXL) {
-        font-size: 1.4*$heading-h2-font-size;
+        font-size: 1.2*$heading-h2-font-size;
     }
     @include breakpoints(laptop) {
-        font-size: .9*$heading-h2-font-size;
+        font-size: .85*$heading-h2-font-size;
     }
     @include breakpoints(tablet) {
         font-size: .7*$heading-h2-font-size;
@@ -90,11 +100,12 @@ h2
 h3
 {
     font-size: $heading-h3-font-size;
-    @include breakpoints(desktopXL) {
-        font-size: 1.4*$heading-h3-font-size;
+
+    @include breakpoints(desktop) {
+        font-size: .8*$heading-h3-font-size;
     }
     @include breakpoints(laptop) {
-        font-size: .9*$heading-h3-font-size;
+        padding: .5*$general-font-size 0;
     }
     @include breakpoints(tablet) {
         font-size: .7*$heading-h3-font-size;
@@ -104,3 +115,10 @@ h3
 #gmap_canvas img
 {   max-width:  none!important;
     background: none!important}
+a
+{
+    color: $general-text-color;
+    &:hover {
+        cursor: pointer;
+    }
+}
