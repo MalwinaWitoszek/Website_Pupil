@@ -7,30 +7,15 @@ function scrollEffect(){
 
     if(ypos > 587){
         header.classList.add('scroll-header');  //header configuration after scroll
-        for(var i=0; i<li.length; i++){           //header-nav-li configuration after scroll
-            li[i].classList.add('scroll-header-li');
+        for(var i=1; i<li.length; i++){           //header-nav-li configuration after scroll
+            li[i].classList.add('scroll-header-li'); //i=1 means changeing all elements except close-hamburger-menu symbol
         }
     }else{
         header.classList.remove('scroll-header'); //header base configuration
-        for(var i=0; i<li.length; i++){                 //header-nav-li base configuration
+        for(var i=1; i<li.length; i++){                 //header-nav-li base configuration
             li[i].classList.remove('scroll-header-li');
         }
     }
 }
 window.addEventListener('scroll',scrollEffect);
 
-
-// function scrollLogoEffect(){
-//     var logo = document.getElementById('logo'),
-//         ypos = window.pageYOffset;
-// console.dir(logo);
-//     if(ypos > 587){
-//         logo.classList.add('scroll-header-logo');  //header configuration after scroll
-//         // header.firstElementChild.firstElementChild.classList.add('scroll-header-logo');  //header-logo configuration after scroll
-//     }else{
-//         logo.classList.remove('scroll-header-logo'); //header base configuration
-//         // header.firstElementChild.firstElementChild.classList.remove('scroll-header-logo');  //header-logo configuration after scroll
-//     }
-// }
-
-// window.addEventListener('scroll',scrollLogoEffect);

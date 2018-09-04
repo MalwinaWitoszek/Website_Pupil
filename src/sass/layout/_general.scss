@@ -36,12 +36,6 @@ body
         width: 100%;
         padding: 0 5%;
     }
-    @include breakpoints(tablet) {
-
-    }
-    @include breakpoints(mobile-landscape) {
-    padding: 0 2%;
-    }
 }
 section
 {

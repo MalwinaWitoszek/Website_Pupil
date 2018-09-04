@@ -8,17 +8,29 @@
     @else if $point == desktop {
     @media (max-width: $media-desktop) { @content; }
     }
+    @else if $point == desktop-portrait {
+    @media (max-width: $media-desktop) and (orientation: portrait) { @content; }
+    }
     @else if $point == laptop {
     @media (max-width: $media-laptop) { @content; }
+    }
+    @else if $point == laptop-portrait {
+    @media (max-width: $media-laptop) and (orientation: portrait) { @content; }
     }
     @else if $point == tablet {
     @media (max-width: $media-tablet) { @content; }
     }
-    @else if $point == mobile-landscape {
-    @media (max-width: $media-mobile-landscape) { @content; }
+    @else if $point == tablet-portrait {
+    @media (max-width: $media-tablet) and (orientation: portrait)  { @content; }
+    }
+    @else if $point == mobile {
+    @media (max-width: $media-mobile) { @content; }
     }
     @else if $point == mobile-portrait {
-    @media (max-width: $media-mobile-portrait) { @content; }
+    @media (max-width: $media-mobile) and (orientation: portrait)  { @content; }
+    }
+    @else if $point == mobile-small {
+    @media (max-width: $media-mobile-small) { @content; }
     }
     }
     //example:

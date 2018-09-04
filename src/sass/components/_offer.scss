@@ -19,6 +19,9 @@
     margin-left: 50px;
     padding: 0 12%;
   }
+  @media (max-width: $media-tablet - 200px){
+    width: 100% !important;
+  }
 }
 
 .offer-box {
@@ -26,6 +29,9 @@
   min-height: $offer-box-min-height;
   @include breakpoints(tablet) {
     margin: 2% 12%;
+  }
+  @media (max-width: $media-mobile - 40px) {
+    margin: 2% 5%;
   }
   &:nth-child(-n+6) {  //changes for the first seven elements
     background-color: $general-color;

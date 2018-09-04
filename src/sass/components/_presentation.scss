@@ -16,16 +16,25 @@
 
     & > img {
       margin: 2% 7%;
-      width: 37%;
+      // width: 37%;
+      min-width: 32vw;
+      height: 25vh;
       @include breakpoints(desktopXL) {
         margin: 2% 10%;
-        width: 32%;
+        // width: 32%;
+        min-width: 29vw;
+        height: 23vh;
       }
+
 
       @include breakpoints(laptop) {
         display: block;
         padding: 5% 3.8*$general-line-height 8%;
-        width: $general-container-width;
+        width: $general-container-width + 10%;
+        height: auto;
+      }
+      @media (max-width: 600px) {
+        padding: 5% 1.1*$general-line-height 8%;
       }
 
     }
@@ -44,6 +53,7 @@
   @media (max-width: 600px ) {
     padding-bottom: $general-line-height;
   }
+
 }
 .presentation-owner {
   padding: 0 19%;
@@ -73,7 +83,7 @@
     @include breakpoints(desktop) {
       width: 45%;
     }
-    @include breakpoints(mobile-landscape) {
+    @include breakpoints(mobile) {
       float: none;
       display: block;
       width: 65%;
@@ -87,7 +97,7 @@
     @media (max-width: 600px ) {
       width: 17%;
     }
-    @include breakpoints(mobile-landscape) {
+    @include breakpoints(mobile) {
       width: 25%;
     }
   }

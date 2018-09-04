@@ -45,6 +45,11 @@
     {
       float: right;
     }
+    & > :last-child    //div with top banner description
+    {
+      padding: 0 5%;
+    }
+
 
     @media (max-width: $media-laptop + 100px) {
       grid-column: 1 / span 6;
@@ -152,6 +157,9 @@
       @include breakpoints(laptop) {
         width: 5%;
       }
+      @media (max-width: 650px) {
+        width: 7%;
+      }
     }
     p{  //link
       margin-top: 0;
@@ -178,6 +186,13 @@
         width: 100%;
       }
     }
+    p {
+      padding-top: 20px;
+      padding-left: 35px;
+      @include breakpoints(tablet) {
+        padding-left: 0;
+      }
+    }
     @media (max-width: $media-laptop + 100px) {
       grid-column: 4 / span 3;
       grid-row: 7 / span 3;
@@ -198,6 +213,12 @@
          width: 100%;
        }
      }
+     p {
+      padding-top: 20px;
+      @include breakpoints(laptop) {
+        padding-left: 35px;
+      }
+    }
      @media (max-width: $media-laptop + 100px) {
        grid-column: 1 / span 6;
        grid-row: 10 / span 3;
@@ -210,10 +231,7 @@
   & > :nth-child(9),
   & > :nth-child(10) {
     @include center-one-element(img);
-    p {
-      padding-top: 20px;
-      padding-left: 35px;
-    }
+
 
     @include breakpoints(laptop) {
       display: block;
@@ -243,7 +261,6 @@
      display: block;
      margin: 0 auto;
      width: .4*$contact-icon-dimension;
-
     }
   }
   .contact-data > p   //contact informations

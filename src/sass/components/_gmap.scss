@@ -1,6 +1,6 @@
 #map
 {
-    min-height: 420px;
+    min-height: 470px;
     width: 100%;
 }
 .map-container{
@@ -8,7 +8,10 @@
     position: relative;
     border: 2px solid $general-color;
     // margin: 0 10px;
-
+    @include breakpoints(laptop) {
+        border-left: 0;
+        border-right: 0;
+       }
     .direction-link {
         position: absolute;
         top: 10px;

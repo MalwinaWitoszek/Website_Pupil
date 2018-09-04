@@ -346,7 +346,7 @@ h1 span:first-child {
   position: absolute;
   bottom: 3.2px;
   -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
+      -ms-writing-mode: vertical-lr;
           writing-mode: vertical-lr;
   text-orientation: upright;
   font-size: 51.2px;
