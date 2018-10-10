@@ -18,7 +18,7 @@
             </a>
             <div class="contact-phone">
                 <img src="img/contact-phone.png" alt="ikona telefon">
-                <span>733 198 552</span>
+                <span class="pulsation">733 198 552</span>
             </div>
             <nav id="top-nav">
                 <ul>
@@ -53,11 +53,17 @@
                 <ul id="slides">
                     <li class="slide showing">
                         <div>
-                            <img src="img/slideshow1.jpg">
+                            <picture>
+                                <source srcset="img/slideshow1_1280x800.jpg" media="(min-width: 1281px)">
+                                <source srcset="img/slideshow1_824x515.jpg" media="(min-width: 825px)">
+                                <source srcset="img/slideshow1_480x300.jpg" media="(min-width: 481px)">
+                                <img src="img/slideshow1_320x200.jpg" alt="biały labrador">
+                            </picture>
+
                             <div class="slide-description">
-                                <img id="paw-img" src="img/lapa.png" alt="ikonka psiej łapy" width=30px>
+                                <img id="paw-img" src="img/lapa.png" alt="ikonka psiej łapy">
                                 <h1>
-                                    <span style="text-orientation:upright">Pupil</span>
+                                    <span >Pupil</span>
                                     <span class="slide-in-down">Salon Pielęgnacji Psów&nbsp;i&nbsp;kotów</span>
                                 </h1>
                             </div>
@@ -65,7 +71,13 @@
                     </li>
                     <li class="slide">
                         <div>
-                            <img src="img/slideshow2.jpg">
+                            <picture>
+                                <source srcset="img/slideshow2_1280x800.jpg" media="(min-width: 1281px)">
+                                <source srcset="img/slideshow2_824x515.jpg" media="(min-width: 825px)">
+                                <source srcset="img/slideshow2_480x300.jpg" media="(min-width: 481px)">
+                                <img src="img/slideshow2_320x200.jpg" alt="mały york">
+                            </picture>
+
                             <div class="slide-description">
                                 <h2 class="slide-in-left">Strzyżenie</h2>
                             </div>
@@ -73,7 +85,13 @@
                     </li>
                     <li class="slide">
                         <div>
-                            <img src="img/slideshow3.jpg">
+                            <picture>
+                                <source srcset="img/slideshow3_1280x800.jpg" media="(min-width: 1281px)">
+                                <source srcset="img/slideshow3_824x515.jpg" media="(min-width: 825px)">
+                                <source srcset="img/slideshow3_480x300.jpg" media="(min-width: 481px)">
+                                <img src="img/slideshow3_320x200.jpg" alt="biały puszysty piesek">
+                            </picture>
+
                             <div class="slide-description">
                                 <h2 class="slide-in-left">Trymowanie</h2>
                             </div>
@@ -81,7 +99,14 @@
                     </li>
                     <li class="slide">
                         <div>
-                            <img src="img/slideshow4.jpg">
+                            <picture>
+                                <source srcset="img/slideshow4_1280x800.jpg" media="(min-width: 1281px)">
+                                <source srcset="img/slideshow4_824x515.jpg" media="(min-width: 825px)">
+                                <source srcset="img/slideshow4_480x300.jpg" media="(min-width: 481px)">
+                                <img src="img/slideshow4_320x200.jpg" alt="owczarek collie">
+                            </picture>
+
+
                             <div class="slide-description">
                                 <h2 class="slide-in-left">Kąpiel</h2>
                             </div>
@@ -89,7 +114,14 @@
                     </li>
                     <li class="slide">
                         <div>
-                            <img src="img/slideshow5.jpg">
+                            <picture>
+                                <source srcset="img/slideshow5_1280x800.jpg" media="(min-width: 1281px)">
+                                <source srcset="img/slideshow5_824x515.jpg" media="(min-width: 825px)">
+                                <source srcset="img/slideshow5_480x300.jpg" media="(min-width: 481px)">
+                                <img src="img/slideshow5_320x200.jpg" alt="pies myśliwski na kanapie">
+                            </picture>
+
+
                             <div class="slide-description">
                                 <h2 class="slide-in-left">Pielęgnacja</h2>
                             </div>
@@ -97,11 +129,27 @@
                     </li>
                     <li class="slide">
                         <div>
-                            <img src="img/slideshow6.jpg">
+                            <picture>
+                                <source srcset="img/slideshow6_1280x800.jpg" media="(min-width: 1281px)">
+                                <source srcset="img/slideshow6_824x515.jpg" media="(min-width: 825px)">
+                                <source srcset="img/slideshow6_480x300.jpg" media="(min-width: 481px)">
+                                <img src="img/slideshow6_320x200.jpg" alt="puszysty szary kot">
+                            </picture>
+
                             <div class="slide-description">
                                 <h2 class="slide-in-left">Wyczesywanie</h2>
                             </div>
                         </div>
+                    </li>
+                    <li class="slide-hidden">
+                        <!-- so that #presentation-slideshow can "see" the height of the img elements which position is absolute -->
+                        <picture>
+                            <source srcset="img/slideshow6_1280x800.jpg" media="(min-width: 1281px)">
+                            <source srcset="img/slideshow6_824x515.jpg" media="(min-width: 825px)">
+                            <source srcset="img/slideshow6_480x300.jpg" media="(min-width: 481px)">
+                            <img src="img/slideshow6_320x200.jpg" alt="ukryte">
+                        </picture>
+
                     </li>
                 </ul>
             </div>
@@ -112,24 +160,24 @@
             <div class="container">
                 <div class="presentation-salon">
                     <h2>Salon groomerski</h2>
-                    <img src="img/logo.png" alt="logo Pupil salon pielęgnacji">
-
-                    <h3>Pielęgnacja zwierząt</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe autem ipsa labore sed veritatis qui, laudantium, nostrum
-                        impedit voluptates debitis, minima sit quae tempora est quod. Repellat ratione consectetur soluta
-                        aut eligendi recusandae! Est doloremque enim nesciunt cumque labore culpa minus nihil perspiciatis
-                        veritatis quibusdam dolor voluptates deleniti, fuga at ullam ipsa. Doloribus distinctio voluptate
-                        corporis consectetur rerum cum explicabo laborum consequatur ad illum nemo ducimus, aspernatur nostrum
-                        sunt id libero provident reiciendis dolore. Sit optio temporibus culpa, numquam sequi quam repellat
-                        consequatur mollitia quia consequuntur fugit aperiam maxime cum ut voluptatem eos quisquam officiis
-                        rem. Iusto at ea esse odit commodi quod officiis nisi saepe, ipsa pariatur ratione maiores quasi,
-                        harum quos earum, deserunt culpa veritatis ullam doloribus.
-                    </p>
+                    <div>
+                        <img src="img/logo.png" alt="logo Pupil salon pielęgnacji">
+                        <div>
+                            <h3>Pielęgnacja zwierząt</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe autem ipsa labore sed veritatis qui, laudantium, nostrum
+                                impedit voluptates debitis, minima sit quae tempora est quod. Repellat ratione consectetur soluta
+                                aut eligendi recusandae! Est doloremque enim nesciunt cumque labore culpa minus nihil perspiciatis
+                                veritatis quibusdam dolor voluptates deleniti, fuga at ullam ipsa. Doloribus distinctio voluptate
+                                corporis consectetur rerum cum explicabo laborum consequatur ad illum nemo ducimus, aspernatur
+                                nostrum sunt id libero provident reiciendis dolore. Sit optio temporibus culpa, numquam sequi
+                                quam repellat consequatur mollitia quia consequuntur.
+                        </div>
+                    </div>
                 </div>
                 <div class="presentation-owner">
-                    <h3>Dlaczego zostałam fryzjerem dla psów</h3>
-                    <img src="img/presentation-owner.jpg" alt="salon Pupil właściciel">
+                    <h3>Dlaczego zostałam fryzjerem psów</h3>
+                    <img src="img/presentation-owner.jpg" alt="właścicielka salonu Pupil">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe autem ipsa labore sed veritatis qui, laudantium, nostrum
                         impedit voluptates debitis, minima sit quae tempora est quod. Repellat ratione consectetur soluta
@@ -156,10 +204,10 @@
             <h2 class="container">Psi fryzjer oferuje:</h2>
             <div class="offer-container">
                 <div class="offer-box slide-in slide-in-from-left">
-                    <img class="offer-picture slide-in-from-left" src="img/offer-image1.jpg" alt="obrazek pieska">
+                    <img class="offer-picture" src="img/offer-image1.jpg" alt="obrazek pieska">
                     <div class="offer-description">
                         <h3>Strzyżenie</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur dolor sit amet, consectetur </p>
+                        <p>bezstresowo i delikatnie wykonujemy strzyżenie pieskow każdej rasy </p>
 
                     </div>
                 </div>
@@ -198,6 +246,9 @@
                         <h3>Obcinanie pazurków</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur dolor sit am </p>
                     </div>
+                </div>
+                <div class="offer-box">
+                    <img class="offer-addition-img1" src="img/lapa.png" alt="ikonka psiej łapy">
                 </div>
                 <div class="offer-box">
                     <img class="offer-addition-img1" src="img/lapa.png" alt="ikonka psiej łapy">
@@ -288,7 +339,7 @@
                             <td>20zł</td>
                         </tr>
                         <tr>
-                            <td>Pielęgnacja oczu i uszy</td>
+                            <td>Pielęgnacja oczu i uszu</td>
                             <td>20zł</td>
                         </tr>
                         <tr>
@@ -322,17 +373,17 @@
                 <div class="main-img">
                     <img src="img/galery-photo1.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil" id="actual">
                 </div>
-                <img src="img/galery-photo1.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo2.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo3.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo4.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo5.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo6.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo7.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo8.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo9.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo10.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
-                <img src="img/galery-photo11.jpg" alt="zdjęcie psa po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo1.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo2.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo3.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo4.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo5.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo6.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo7.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo8.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo9.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo10.jpg" alt="piesek po pielęgnacji w salonie Pupil">
+                <img src="img/galery-photo11.jpg" alt="piesek po pielęgnacji w salonie Pupil">
             </div>
         </section>
 
@@ -354,8 +405,20 @@
                 <div class="contact-icon center">
                     <img src="img/contact-house.png" alt="ikonka domu">
                 </div>
+                <div class="contact-data center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo
+                        corrupti.
+                    </p>
+                </div>
                 <div class="contact-icon center">
                     <img src="img/contact-phone.png" alt="ikonka telefonu">
+                </div>
+                <div class="contact-data center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo
+                        corrupti.
+                    </p>
                 </div>
                 <div class="contact-icon center">
                     <img src="img/contact-clock.png" alt="ikona zegara">
@@ -366,17 +429,19 @@
                         corrupti.
                     </p>
                 </div>
-                <div class="contact-data center">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo
-                        corrupti.
+                <div class="contact-icon center">
+                    <a href="https://www.facebook.com/Psi-Salonik-Pi%C4%99kno%C5%9Bci-Pupilstrzy%C5%BCenie-ps%C3%B3w-psa-%C5%BBORY-1756564614587818/">
+                        <img src="img/facebook-icon.png" alt="ikonka facebook" class="pulsation-fb">
+                    </a>
+                    <p>
+                        <a href="https://www.facebook.com/Psi-Salonik-Pi%C4%99kno%C5%9Bci-Pupilstrzy%C5%BCenie-ps%C3%B3w-psa-%C5%BBORY-1756564614587818/">sprawdź nas na facebooku!</a>
                     </p>
                 </div>
-                <div class="contact-data center">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vel. Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Eum voluptatem consequatur sint vero recusandae deserunt quasi quas sequi explicabo
-                        corrupti.
+                <div class="contact-salon-photo">
+                    <p>
+                        <strong>Salon fryzjerski dla psów i kotów PUPIL</strong>
                     </p>
+                    <img src="img/contact-firm-photo.jpg" alt="wnętrze salonu Pupil">
                 </div>
                 <div class="contact-google-map">
                     <p>Mapa dojazdu </p>
@@ -385,12 +450,7 @@
                         <div id="map"></div>
                     </div>
                 </div>
-                <div class="contact-salon-photo">
-                    <p>
-                        <strong>Salon fryzjerski dla psów i kotów PUPIL</strong>
-                    </p>
-                    <img src="img/contact-firm-photo.jpg" alt="zdjęcie wnętrza salonu Pupil">
-                </div>
+
             </div>
         </section>
     </main>

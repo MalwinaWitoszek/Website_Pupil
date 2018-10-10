@@ -8,6 +8,7 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");                    //kompilacja scss --> css i minifikacja csss
+// var	autoprefixer = require('autoprefixer');    // dodanie wendor prefiksów
 var	autoprefixer = require('gulp-autoprefixer');    // dodanie wendor prefiksów
 var	watch = require('gulp-watch');                      // nasłuchiwanie zmian w plikach
 var plumber = require('gulp-plumber');              // zapobiega przerywaniu zadań - obsługa błędów
@@ -18,7 +19,7 @@ var uglify = require('gulp-uglify');        // minifikacja plików js
 var imagemin = require('gulp-imagemin');    // kompresja obrazów
 var runSequence = require('run-sequence');    // kompresja obrazów
 var browserSync = require('browser-sync').create(); // przeładowanie przeglądarki
-
+var deploy = require('gulp-gh-pages');         // umieszczenie projektu na github pages
 
 // styleSheets
 
@@ -28,10 +29,23 @@ gulp.task('styles', function() {
     .pipe(sass.sync({  //   kompilacja SCSS → CSS
         outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed
     }))
-    .pipe(autoprefixer({ grid: true }))	  // dodanie wendor prefiksów
+    .pipe(autoprefixer({   // dodanie wendor prefiksów
+        browsers: ['last 2 versions'],
+        grid: true
+    }))
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream())	// przeładowanie przeglądarki
 });
+// gulp.task('styles', function() {
+//     return gulp.src("src/sass/main.scss")
+//     .pipe(plumber())  //  zapobiega przerywaniu zadań - obsługa błędów
+//     .pipe(sass.sync({  //   kompilacja SCSS → CSS
+//         outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed
+//     }))
+//     .pipe(autoprefixer({ grid: true }))	  // dodanie wendor prefiksów
+//     .pipe(gulp.dest('src/css'))
+//     .pipe(browserSync.stream())	// przeładowanie przeglądarki
+// });
 
 
 //  JavaScript
@@ -101,6 +115,10 @@ gulp.task('server-sync', function() {     // stworzenie serwera w katalogu src
     });
 });
 
+gulp.task("deploy", ["build"], function () {   // wdrożenie projektu na github pages
+    return gulp.src("./dist/**/*")
+      .pipe(deploy())
+  });
 
 
 
