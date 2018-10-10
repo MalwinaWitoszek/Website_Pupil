@@ -19,7 +19,7 @@ var uglify = require('gulp-uglify');        // minifikacja plików js
 var imagemin = require('gulp-imagemin');    // kompresja obrazów
 var runSequence = require('run-sequence');    // kompresja obrazów
 var browserSync = require('browser-sync').create(); // przeładowanie przeglądarki
-var deploy = require('gulp-gh-pages');         // umieszczenie projektu na github pages
+var ghPages = require('gulp-gh-pages');         // umieszczenie projektu na github pages
 
 // styleSheets
 
@@ -116,13 +116,13 @@ gulp.task('server-sync', function() {     // stworzenie serwera w katalogu src
 });
 
 gulp.task("deploy", ["build"], function () {   // wdrożenie projektu na github pages
-    return gulp.src("./dist/**/*")
-      .pipe(deploy())
+    return gulp.src("dist/**/*")
+      .pipe(ghPages())
   });
 
 
 
-// wykonywanie sekwencji zadań - wywoanie gulp build
+// wykonywanie sekwencji zadań - wywołanie gulp build
 // Jeżeli wyjdzie GULP 4 to zamienić to na gulp.series !
 
 gulp.task("build", function() {
