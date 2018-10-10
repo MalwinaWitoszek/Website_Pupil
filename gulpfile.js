@@ -115,7 +115,7 @@ gulp.task('server-sync', function() {     // stworzenie serwera w katalogu src
     });
 });
 
-gulp.task("deploy", ["build"], function () {   // wdrożenie projektu na github pages
+gulp.task('deploy', function () {   // wdrożenie projektu na github pages
     return gulp.src("dist/**/*")
       .pipe(ghPages())
   });
