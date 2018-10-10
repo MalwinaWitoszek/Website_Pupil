@@ -119,6 +119,14 @@ gulp.task('deploy', function () {   // wdrożenie projektu na github pages
     return gulp.src("dist/**/*")
       .pipe(ghPages())
   });
+// in case of Error:
+// TypeError: Cannot read property '0' of null
+// the solution:
+//     Need to upgrade gift within the gulp-gh-pages module:
+//     cd node_modules/gulp-gh-pages/
+//     npm install --save gift@0.10.2
+//     cd ../../
+//     gulp deploy
 
 
 
