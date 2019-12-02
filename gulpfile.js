@@ -1,6 +1,6 @@
 // Jeżeli wyjdzie GULP 4 to zamienić run-sequence na gulp.series !
 // INSTALACJA PLUGINÓW
-// npm install --save-dev gulp gulp-watch browser-sync gulp-sass gulp-autoprefixer gulp-plumber del gulp-useref gulp-if gulp-uglify gulp-imagemin run-sequence
+// npm install --save-dev gulp gulp-watch browser-sync gulp-gh-pages gulp-sass gulp-autoprefixer gulp-plumber del gulp-useref gulp-if gulp-terser gulp-imagemin gulp4-run-sequence
 
 
 
@@ -15,9 +15,9 @@ var plumber = require('gulp-plumber');              // zapobiega przerywaniu zad
 var del = require("del");
 var useref = require('gulp-useref');        // konkatenacja plików js bez minifikacji
 var gulpif = require('gulp-if');            // sprawdzanie warunków
-var uglify = require('gulp-uglify');        // minifikacja plików js
+var terser = require('gulp-terser');        // minifikacja plików js
 var imagemin = require('gulp-imagemin');    // kompresja obrazów
-var runSequence = require('run-sequence');    // kompresja obrazów
+var runSequence = require('gulp4-run-sequence');    // sekwencja zdarzen
 var browserSync = require('browser-sync').create(); // przeładowanie przeglądarki
 var ghPages = require('gulp-gh-pages');         // umieszczenie projektu na github pages
 
@@ -27,7 +27,7 @@ gulp.task('styles', function() {
     return gulp.src("src/sass/main.scss")
     .pipe(plumber())  //  zapobiega przerywaniu zadań - obsługa błędów
     .pipe(sass.sync({  //   kompilacja SCSS → CSS
-        outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed
+        outputStyle: 'compressed'          // możliwości: nested, expanded, compact, compressed
     }))
     .pipe(autoprefixer({   // dodanie wendor prefiksów
         browsers: ['last 2 versions'],
@@ -36,27 +36,17 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream())	// przeładowanie przeglądarki
 });
-// gulp.task('styles', function() {
-//     return gulp.src("src/sass/main.scss")
-//     .pipe(plumber())  //  zapobiega przerywaniu zadań - obsługa błędów
-//     .pipe(sass.sync({  //   kompilacja SCSS → CSS
-//         outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed
-//     }))
-//     .pipe(autoprefixer({ grid: true }))	  // dodanie wendor prefiksów
-//     .pipe(gulp.dest('src/css'))
-//     .pipe(browserSync.stream())	// przeładowanie przeglądarki
-// });
 
 
 //  JavaScript
 
 
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
     return gulp.src("src/*.html")
-    .pipe(useref())
-    .pipe(gulpif("*.js",uglify()))      // jeżeli plik ma rozszerzenie js, to wywołujemy uglify
-    .pipe(gulp.dest("dist/"));
-    })
+        .pipe(useref())
+        .pipe(gulpif("*.js", terser()))      // jeżeli plik ma rozszerzenie js, to wywołujemy terser
+        .pipe(gulp.dest("dist/"));
+})
  // w index html nalezy zgodnie ze wzorem podac:
 // przykład do USEREF - konkatenacja plików, należy dodać:
 // <html>
@@ -89,7 +79,7 @@ gulp.task("images", function() {
 // Automatyzacja
 
 gulp.task('watch', function() {	                // nasłuchiwanie zmian w plikach
-    gulp.watch('src/sass/**/*.scss', ['styles']);
+    gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
     gulp.watch(["src/*.html", "src/**/*.js"], browserSync.reload);
 });
     // gulp.watch(["src/*.scripts", "src/**/*.js"]).on('change', browserSync.reload);
@@ -116,9 +106,26 @@ gulp.task('server-sync', function() {     // stworzenie serwera w katalogu src
 });
 
 gulp.task('deploy', function () {   // wdrożenie projektu na github pages
-    return gulp.src("dist/**/*")
+    return gulp.src("./dist/**/*")
       .pipe(ghPages())
   });
+//   co zrobic:
+//   1.npm install gulp-gh-pages --save-dev
+//   2.dodać require('gulp-gh-pages')
+//   3.dodać task deploy(patrz wyzej)
+//   4.gulp build - aby utworzyc dist
+//   4.push the latest changes to your repo to Github:
+//   git add . , git commit ,git push origin MediaStreamError5.
+//   5.make sure you have a gh-pages branch, if you don’t already. (Be careful when using git rm -rf )
+//     git checkout --orphan gh-pages
+//     git rm -rf .
+//     touch README.md
+//     git add README.md
+//     git commit -m "Init gh-pages"
+//     git push --set-upstream origin gh-pages
+//     git checkout master
+//  6. gulp deploy
+
 // in case of Error:
 // TypeError: Cannot read property '0' of null
 // the solution:
@@ -130,17 +137,19 @@ gulp.task('deploy', function () {   // wdrożenie projektu na github pages
 
 
 
+
 // wykonywanie sekwencji zadań - wywołanie gulp build
 // Jeżeli wyjdzie GULP 4 to zamienić to na gulp.series !
 
-gulp.task("build", function() {
+gulp.task("build", function (done) {
     runSequence("clean", "scripts", "copy", "images");
-    })
+    done()
+})
 
 
 //  Zadania domyślne
 
-gulp.task("default", ["styles", "server-sync", "watch"]);   //wywołanie w terminalu: gulp
+gulp.task("default", gulp.parallel("styles", "server-sync", "watch"));   //wywołanie w terminalu: gulp
 
 
 
